@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="15508" started-at="2020-09-17T18:05:55 WAT" finished-at="2020-09-17T18:06:11 WAT">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="15508" started-at="2020-09-17T18:05:55 WAT" finished-at="2020-09-17T18:06:11 WAT">
+      <class name="com.app.login.login">
+        <test-method status="PASS" signature="initializeWebDriver()[pri:0, instance:com.app.login.login@2bbf4b8b]" name="initializeWebDriver" is-config="true" duration-ms="15517" started-at="2020-09-17T18:05:40 WAT" finished-at="2020-09-17T18:05:55 WAT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebDriver -->
+        <test-method status="PASS" signature="loginWithValidCredentials()[pri:0, instance:com.app.login.login@2bbf4b8b]" name="loginWithValidCredentials" duration-ms="15435" started-at="2020-09-17T18:05:56 WAT" finished-at="2020-09-17T18:06:11 WAT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredentials -->
+      </class> <!-- com.app.login.login -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
