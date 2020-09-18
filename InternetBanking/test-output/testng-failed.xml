@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.app.login.login">
+      <class name="com.app.retailUser.login">
         <methods>
           <include name="loginWithValidCredentials"/>
           <include name="initializeWebDriver"/>
         </methods>
-      </class> <!-- com.app.login.login -->
+      </class> <!-- com.app.retailUser.login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
