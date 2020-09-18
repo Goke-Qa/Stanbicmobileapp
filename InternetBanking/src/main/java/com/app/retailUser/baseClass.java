@@ -19,7 +19,7 @@ public class baseClass {
          driver.manage().window().maximize();  
      
          driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);  
-    	}
+           	}
     	
     	catch (Exception exp) {
     		System.out.println("The cause is: " +exp.getCause());
