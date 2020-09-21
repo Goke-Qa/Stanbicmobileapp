@@ -13,14 +13,14 @@ public class baseClass {
     
     @BeforeSuite  
     public void initializeWebDriver() throws IOException {  
-    	try {
-         System.setProperty("webdriver.chrome.driver","C:\\Users\\A239215\\eclipse-workspace\\InternetBanking\\src\\drivers\\chromedriver.exe");  
-         driver = new ChromeDriver();  
-         driver.manage().window().maximize();  
-     
-         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);  
-    	}
-    	
+    	         
+    try {
+    	System.setProperty("webdriver.chrome.driver","C:\\Users\\A239215\\eclipse-workspace\\InternetBanking\\src\\drivers\\chromedriver.exe");  
+        driver = new ChromeDriver(); 
+        driver.manage().window().maximize();  
+         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
+           	}
+    
     	catch (Exception exp) {
     		System.out.println("The cause is: " +exp.getCause());
     		System.out.println("The message is: " +exp.getMessage());
@@ -28,10 +28,10 @@ public class baseClass {
     		}
 
     }
-   /*
+  
     @AfterSuite  
     public void quitDriver() {  
          driver.quit();  
     }  
-    */
+    
 }
