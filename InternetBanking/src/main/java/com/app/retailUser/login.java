@@ -26,9 +26,9 @@ public class login extends baseClass{
 		 // Input token details
 		 // Pause test execution at this point since the token page takes a while to load
 		 @SuppressWarnings("deprecation")
-		WebDriverWait wait = new WebDriverWait(driver, 500);
-		WebElement tokenInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtpassCode")));
-		tokenInput.sendKeys("12345");
+		 WebDriverWait wait = new WebDriverWait(driver, 500);
+		 WebElement tokenInput =  wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txtpassCode")));
+		 tokenInput.sendKeys("12345");
 		driver.findElement(By.xpath("//*[@id=\"frmOtp\"]/div[2]/div/button[1]")).click();
 	}
 	
