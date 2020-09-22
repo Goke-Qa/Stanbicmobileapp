@@ -47,14 +47,14 @@
 	<groupId>org.testng</groupId>
 	<artifactId>testng</artifactId>
 	<version>6.14.3</version>
-	<scope>test</scope>
+	<scope>compile</scope>
 </dependency>
 
 <dependency> 
  <groupId>com.apple</groupId> 
  <artifactId>AppleJavaExtensions</artifactId>
  <version>1.4</version>
-  </dependency>
+</dependency>
 
   <dependency>
         <groupId>org.uncommons</groupId>
