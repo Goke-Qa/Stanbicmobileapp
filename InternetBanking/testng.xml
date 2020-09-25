@@ -9,7 +9,7 @@
 
   <test name="login" >
     <classes>
-       <class name="com.app.retailUser.login" />
+       <class name="retailUser.login" />
     </classes>
   </test>
  
