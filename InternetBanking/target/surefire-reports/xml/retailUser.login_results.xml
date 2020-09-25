@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="53.262">
+           time="33.560">
   <properties />
   
   
-            <testcase name="loginWithValidCredentials" time="53.262" classname="com.app.retailUser.login" />
+            <testcase name="loginWithValidCredentials" time="33.560" classname="retailUser.login" />
       
 </testsuite>
