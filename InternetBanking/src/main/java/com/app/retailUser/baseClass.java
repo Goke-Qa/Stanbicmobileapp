@@ -1,21 +1,26 @@
 package com.app.retailUser;
 
 import java.io.IOException;
+
+
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class baseClass {
+	
 	public static WebDriver driver;  
     
-    @BeforeSuite  
+    @BeforeSuite     
     public void initializeWebDriver() throws IOException {  
-    	         
+         
     try {
-    	System.setProperty("webdriver.chrome.driver","C:\\Users\\A239215\\eclipse-workspace\\InternetBanking\\src\\drivers\\chromedriver.exe");  
+    	WebDriverManager.chromedriver().setup();
+    	//System.setProperty("webdriver.chrome.driver","C:\\Users\\A239215\\eclipse-workspace\\InternetBanking\\src\\drivers\\chromedriver.exe");  
         driver = new ChromeDriver(); 
         driver.manage().window().maximize();  
          driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
