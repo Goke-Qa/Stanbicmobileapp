@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="TestSuite" time="54.127" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="TestSuite" time="84.143" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_192\jre\bin"/>
@@ -20,7 +20,7 @@
     <property name="basedir" value="C:\Users\A239215\git\Quality Assurance and Testing Projects\InternetBanking"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_192\jre\lib\endorsed"/>
     <property name="os.arch" value="amd64"/>
-    <property name="surefire.real.class.path" value="C:\Users\A239215\AppData\Local\Temp\surefirebooter2590471405589032317.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\A239215\AppData\Local\Temp\surefirebooter2822328501691606601.jar"/>
     <property name="java.io.tmpdir" value="C:\Users\A239215\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
@@ -45,7 +45,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_192\jre"/>
-    <property name="sun.java.command" value="C:\Users\A239215\AppData\Local\Temp\surefirebooter2590471405589032317.jar C:\Users\A239215\AppData\Local\Temp\surefire1323409862242364316tmp C:\Users\A239215\AppData\Local\Temp\surefire6070209276078150010tmp"/>
+    <property name="sun.java.command" value="C:\Users\A239215\AppData\Local\Temp\surefirebooter2822328501691606601.jar C:\Users\A239215\AppData\Local\Temp\surefire679330789081412815tmp C:\Users\A239215\AppData\Local\Temp\surefire8825631319867401588tmp"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -63,5 +63,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="retailUser.login" name="loginWithValidCredentials" time="33.565"/>
+  <testcase classname="retailUser.login" name="loginWithValidCredentials" time="60.649"/>
 </testsuite>
