@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="login"
-           tests="1"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="36.420">
+           time="50.574">
   <properties />
   
   
-            <testcase name="loginWithValidCredentials" time="36.420" classname="retailUser.login" />
+            <testcase name="loginWithInValidCredentials" time="0.001" classname="retailUser.login" />
+                <testcase name="loginWithValidCredentials" time="50.573" classname="retailUser.login" />
       
 </testsuite>
