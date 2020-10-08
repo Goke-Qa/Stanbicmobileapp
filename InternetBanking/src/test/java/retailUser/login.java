@@ -20,8 +20,12 @@ public class login extends baseClass{
 		 objLogin = new LoginPage(driver);
 		 objLogin.loginInternetBanking("0015969269", "Test@12345");
 		 
+		 //Verify user has been directed to tekn page
+		objToken = new TokenPage(driver);
+		String tokenPageName = objToken.getTokenPageName();
+		Assert.assertTrue(tokenPageName.toLowerCase().contains("adenike"));
+		 
 		 // Input token details
-		 objToken = new TokenPage(driver);
 		 objToken.setTokenInternetBanking("12345");		
 		 
 		 //Verify user is landed on the Dashboard
