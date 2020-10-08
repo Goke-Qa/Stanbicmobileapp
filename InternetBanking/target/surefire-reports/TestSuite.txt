@@ -1,4 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 68.373 sec
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 50.601 sec <<< FAILURE!
+loginWithValidCredentials(retailUser.login)  Time elapsed: 21.941 sec  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Supplied function might have stalled
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: '433575CG0142L', ip: '192.168.43.117', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_192'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:221)
+	at pageFactory.TokenPage.waitToeknElement(TokenPage.java:44)
+	at retailUser.login.loginWithValidCredentials(login.java:25)
+Caused by: java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1771)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1915)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	... 33 more
+
