@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+@SuppressWarnings("unused")
 public class TokenPage {
 	WebDriver driver;
 		
@@ -19,8 +20,11 @@ public class TokenPage {
 	@FindBy(xpath="/html/body/app-root/ng-component/div/div/div/div/div[1]/h5")
 	WebElement getTokenPageName;
 	
-	@FindBy(className="account-name-truncate")
+	@FindBy(className = "account-name-truncate")
 	WebElement dashboardName;
+	
+	By dashboardNameWait = By.className("account-name-truncate");
+	By dashboardCards = By.xpath("/html/body/app-root/app-default-layout/div/div[2]/main/app-account/div/div[2]/div[1]/div[1]/div[4]/mat-card/mat-card-content/h6/div[2]");
 		
 	public TokenPage(WebDriver driver) {
 		this.driver = driver;
@@ -39,7 +43,12 @@ public class TokenPage {
 		return getTokenPageName.getText();
 	}
 	public String getDashboardName() {
-		return dashboardName.getText();
+		return (dashboardName.getText());
+	}
+	public void waitDashboardCards() {
+		@SuppressWarnings("deprecation")
+		WebDriverWait wait = new WebDriverWait(driver, 100);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(dashboardCards));
 	}
 		 
 	// This will be referenced in the test case class
@@ -48,6 +57,6 @@ public class TokenPage {
 		WebDriverWait wait = new WebDriverWait(driver, 100);
 		this.setTokenInput(token);
 		this.clickContinueButton();
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("account-name-truncate")));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(dashboardNameWait));
 		}
 }

@@ -1,11 +1,12 @@
 package retailUser;
 import org.testng.Assert;
+
 import org.testng.annotations.Test;
 import pageFactory.LoginPage;
 import pageFactory.TokenPage;
 import pageFactory.httpsErrorPage;
 
-public class login extends baseClass{
+public class login extends setUp{
 	static LoginPage objLogin;
 	static httpsErrorPage objHttpError;
 	static TokenPage objToken;
