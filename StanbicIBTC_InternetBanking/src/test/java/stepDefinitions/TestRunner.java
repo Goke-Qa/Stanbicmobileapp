@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 glue = {"stepDefinitions"},
 monochrome = true,
 plugin = {"pretty","html:target/cucumber-reports/report.html"},
-tags = "@smoke"
+tags =  "@smoke or @functional"
 		)
 
 public class TestRunner {

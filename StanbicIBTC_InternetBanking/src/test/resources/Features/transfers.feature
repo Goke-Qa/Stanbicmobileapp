@@ -12,7 +12,7 @@ Feature: Transfers
     And clicks on the continue  button
     Then user is navigated to the dashboard
 
-  @smoke
+  @functional
   Scenario Outline: Transfer to Others
     When user clicks on the transfers link
     Then user is navigated to the transfers page
