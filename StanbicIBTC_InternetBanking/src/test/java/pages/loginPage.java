@@ -1,4 +1,4 @@
-package Pages;
+package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +17,6 @@ public class loginPage {
 	@FindBy(xpath = "//*[@id='frmLogin']/div[4]/div/div/div/button")
 	WebElement loginButton;
 
-	//@FindBy(className = "simple-notification-wrapper bottom right")
 	@FindBy(xpath = "/html/body/app-root/simple-notifications/div/simple-notification/div/div[1]/div[2]")
 	WebElement errorPrompt;
 

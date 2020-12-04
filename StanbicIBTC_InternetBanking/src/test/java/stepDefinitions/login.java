@@ -2,16 +2,19 @@ package stepDefinitions;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import Pages.loginPage;
-import Pages.tokenPage;
-import Pages.httpErrorPage;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import managers.PageObjectManager;
+import pages.httpErrorPage;
+import pages.loginPage;
+import pages.tokenPage;
 
 public class login{
 	WebDriver driver;
+	static PageObjectManager PageObjectManager;
 	static httpErrorPage httpErrorPage;
 	static loginPage loginPage;
 	static tokenPage tokenPage;
@@ -38,7 +41,8 @@ public class login{
 
 	@When("user clicks on the Advanced button")
 	public void user_clicks_on_the_advanced_button() {
-		httpErrorPage = new httpErrorPage(driver);
+		PageObjectManager = new PageObjectManager(driver);
+		httpErrorPage = PageObjectManager.getHttpErrorPage();
 		httpErrorPage.clickAdvancedButton();
 	}
 
@@ -49,7 +53,7 @@ public class login{
 
 	@Then("user is navigated to the login page")
 	public void user_is_navigated_to_the_login_page() {
-		loginPage = new loginPage(driver);
+		loginPage = PageObjectManager.getLoginPage();
 		loginPage.checkLoginButton();
 	}
 
@@ -62,7 +66,7 @@ public class login{
 
 	@And("clicks on the login button")
 	public void clicks_on_the_login_button() {
-		tokenPage = new tokenPage(driver);
+		tokenPage = PageObjectManager.getTokenPage();
 		loginPage.clickLoginButton();
 		tokenPage.getTokenPageName();
 	}
