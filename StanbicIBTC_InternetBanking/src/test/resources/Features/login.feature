@@ -1,5 +1,6 @@
-Feature: Test the login functionality on Internet Banking
+Feature: Login
 
+	@smoke
   Scenario Outline: Login with valid credentials
     Given user has entered a valid URL
     When user clicks on the Advanced button
