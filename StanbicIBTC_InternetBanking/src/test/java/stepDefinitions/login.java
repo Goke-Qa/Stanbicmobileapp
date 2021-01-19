@@ -1,94 +1,76 @@
 package stepDefinitions;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import io.cucumber.java.en.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import managers.PageObjectManager;
+
 import pages.httpErrorPage;
 import pages.loginPage;
 import pages.tokenPage;
 
+
 public class login{
-	WebDriver driver;
-	static PageObjectManager PageObjectManager;
-	static httpErrorPage httpErrorPage;
-	static loginPage loginPage;
-	static tokenPage tokenPage;
+	Controller controller;
+	httpErrorPage httpErrorPage;
+	loginPage loginPage;
+	tokenPage tokenPage;
 
-	@SuppressWarnings("deprecation")
-	@Before
-	public void launchBrowser() {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver(); 
-		driver.manage().window().maximize();  
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
-	}
-
-	@After
-	public void tearDown() {
-		driver.close();
-		driver.quit();
+	public login(Controller controller) {
+		this.controller = controller;
+		httpErrorPage = new  httpErrorPage(this.controller);
+		loginPage = new loginPage(this.controller);
+		tokenPage = new  tokenPage(this.controller);
 	}
 
 	@Given("user has entered a valid URL")
 	public void user_has_entered_a_valid_url() {
-		driver.navigate().to("https://80.248.0.83:3443/#/auth/login");
+		// This is being handled in the coontroller class
 	}
 
 	@When("user clicks on the Advanced button")
 	public void user_clicks_on_the_advanced_button() {
-		PageObjectManager = new PageObjectManager(driver);
-		httpErrorPage = PageObjectManager.getHttpErrorPage();
-		httpErrorPage.clickAdvancedButton();
+		this.httpErrorPage.clickAdvancedButton();
 	}
 
 	@And("clicks on the proceed button")
 	public void clicks_on_the_proceed_button() {
-		httpErrorPage.clickRedirectLink();
+		this.httpErrorPage.clickRedirectLink();
 	}
 
 	@Then("user is navigated to the login page")
 	public void user_is_navigated_to_the_login_page() {
-		loginPage = PageObjectManager.getLoginPage();
-		loginPage.checkLoginButton();
+		this.loginPage.checkLoginButton();
 	}
 
 	@When("user enters valid {string} and {string}")
 	public void user_enters_valid_and_test(String username, String password) {
-		loginPage.setLoginUserID(username);
-		loginPage.setPassword(password);
+		this.loginPage.setLoginUserID(username);
+		this.loginPage.setPassword(password);
 
 	}
 
 	@And("clicks on the login button")
 	public void clicks_on_the_login_button() {
-		tokenPage = PageObjectManager.getTokenPage();
-		loginPage.clickLoginButton();
-		tokenPage.getTokenPageName();
+		this.loginPage.clickLoginButton();
+		this.tokenPage.getTokenPageName();
 	}
 
 	@Then("user is directed to the token page")
 	public void user_is_directed_to_the_token_page() {
-		driver.getPageSource().contains("WELCOME");
+		this.tokenPage.getTokenPageName();
 	}
 
 	@When("user enters a valid token")
 	public void user_enters_a_valid_token() {
-		tokenPage.setTokenInput("12345");
+		this.tokenPage.setTokenInput("12345");
 	}
 
 	@And("clicks on the continue  button")
 	public void clicks_on_the_continue_button() {
-		tokenPage.clickContinueButton();
+		this.tokenPage.clickContinueButton();
 	}
 
 	@Then("user is navigated to the dashboard")
 	public void user_is_navigated_to_the_dashboard() {
-		tokenPage.checkDashboardPage();
+		//tokenPage.checkDashboardPage();
 	}
 
 
