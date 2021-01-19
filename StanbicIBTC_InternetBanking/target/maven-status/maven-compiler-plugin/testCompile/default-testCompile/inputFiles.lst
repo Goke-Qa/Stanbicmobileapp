@@ -1,5 +1,10 @@
-C:\Users\A239215\git\Quality Assurance and Testing Projects\StanbicIBTC_InternetBanking\src\test\java\Pages\tokenPage.java
-C:\Users\A239215\git\Quality Assurance and Testing Projects\StanbicIBTC_InternetBanking\src\test\java\Pages\loginPage.java
-C:\Users\A239215\git\Quality Assurance and Testing Projects\StanbicIBTC_InternetBanking\src\test\java\Pages\httpErrorPage.java
+C:\Users\A239215\git\Quality Assurance and Testing Projects\StanbicIBTC_InternetBanking\src\test\java\pages\tokenPage.java
+C:\Users\A239215\git\Quality Assurance and Testing Projects\StanbicIBTC_InternetBanking\src\test\java\stepDefinitions\setUp.java
+C:\Users\A239215\git\Quality Assurance and Testing Projects\StanbicIBTC_InternetBanking\src\test\java\pages\loginPage.java
+C:\Users\A239215\git\Quality Assurance and Testing Projects\StanbicIBTC_InternetBanking\src\test\java\pages\transferToOthersPage.java
+C:\Users\A239215\git\Quality Assurance and Testing Projects\StanbicIBTC_InternetBanking\src\test\java\stepDefinitions\Controller.java
+C:\Users\A239215\git\Quality Assurance and Testing Projects\StanbicIBTC_InternetBanking\src\test\java\pages\httpErrorPage.java
+C:\Users\A239215\git\Quality Assurance and Testing Projects\StanbicIBTC_InternetBanking\src\test\java\stepDefinitions\transfers.java
+C:\Users\A239215\git\Quality Assurance and Testing Projects\StanbicIBTC_InternetBanking\src\test\java\pages\transferToSelfPage.java
 C:\Users\A239215\git\Quality Assurance and Testing Projects\StanbicIBTC_InternetBanking\src\test\java\stepDefinitions\TestRunner.java
 C:\Users\A239215\git\Quality Assurance and Testing Projects\StanbicIBTC_InternetBanking\src\test\java\stepDefinitions\login.java
