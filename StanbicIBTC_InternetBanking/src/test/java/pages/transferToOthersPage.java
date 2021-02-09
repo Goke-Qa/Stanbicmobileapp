@@ -28,13 +28,13 @@ public class transferToOthersPage {
 	@FindBy(xpath = "/html/body/app-root/app-default-layout/div/div/div/nav/a[2]")
 	WebElement transfersLink;
 
-	@FindBy(xpath = "/html/body/app-root/app-default-layout/div/div/main/app-transfer/div/div/div/div/div/div[3]/div/div/app-one-time-transfer/mat-card/mat-card-content/div/mat-horizontal-stepper/div[2]/div[1]/div/div[1]/form/div[1]/div[1]/div[1]/mat-form-field/div/div[1]/div/mat-select")
+	@FindBy(xpath = "/html/body/app-root/app-default-layout/div/div/main/app-transfer/div/div/div/div/div/div[3]/div/div/app-one-time-transfer/mat-card/mat-card-content/div/mat-horizontal-stepper/div[2]/div[1]/div/div[1]/form/div[2]/div[1]/div[1]/mat-form-field/div/div[1]/div/mat-select")
 	WebElement select_fromAccount;
 
 	@FindBy(name = "destAccountNo")
 	WebElement txt_toAccount;
 
-	@FindBy(xpath = "/html/body/app-root/app-default-layout/div/div/main/app-transfer/div/div/div/div/div/div[3]/div/div/app-one-time-transfer/mat-card/mat-card-content/div/mat-horizontal-stepper/div[2]/div[1]/div/div[1]/form/div[1]/div[2]/div[2]/mat-form-field/div/div[1]/div/mat-select")
+	@FindBy(xpath = "/html/body/app-root/app-default-layout/div/div/main/app-transfer/div/div/div/div/div/div[3]/div/div/app-one-time-transfer/mat-card/mat-card-content/div/mat-horizontal-stepper/div[2]/div[1]/div/div[1]/form/div[2]/div[2]/div[2]/mat-form-field/div/div[1]/div/mat-select")
 	WebElement select_destBank;
 
 	@FindBy(name = "amount")
@@ -49,7 +49,7 @@ public class transferToOthersPage {
 	@FindBy(name = "senderRef")
 	WebElement txt_recpNarration;
 
-	@FindBy(xpath = "/html/body/app-root/app-default-layout/div/div/main/app-transfer/div/div/div/div/div/div[3]/div/div/app-one-time-transfer/mat-card/mat-card-content/div/mat-horizontal-stepper/div[2]/div[1]/div/div[1]/form/div[5]/div/button[1]")
+	@FindBy(xpath = "/html/body/app-root/app-default-layout/div/div/main/app-transfer/div/div/div/div/div/div[3]/div/div/app-one-time-transfer/mat-card/mat-card-content/div/mat-horizontal-stepper/div[2]/div[1]/div/div[1]/form/div[6]/div/button[1]")
 	WebElement btn_continueButton;
 
 	@FindBy(name = "cfEdit")
@@ -125,10 +125,10 @@ public class transferToOthersPage {
 
 	public void clickContinue() {
 		JavascriptExecutor js = (JavascriptExecutor)controller.getDriver();
-		@SuppressWarnings("deprecation")
-		WebDriverWait wait = new WebDriverWait(controller.getDriver(), 150);
+		/* WebDriverWait wait = new WebDriverWait(controller.getDriver(), 150);
 		WebElement continueBTN = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/app-root/app-default-layout/div/div/main/app-transfer/div/div/div/div/div/div[3]/div/div/app-one-time-transfer/mat-card/mat-card-content/div/mat-horizontal-stepper/div[2]/div[1]/div/div[1]/form/div[5]/div/button[1]")));
-		js.executeScript("arguments[0].click();", continueBTN);
+		 */
+		js.executeScript("arguments[0].click();", btn_continueButton);
 	}
 
 	public void verifyAccountDetails() {

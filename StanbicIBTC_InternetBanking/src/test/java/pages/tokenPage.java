@@ -40,18 +40,14 @@ public class tokenPage {
 	public void setTokenInput(String token){
 		tokenInput.sendKeys(token);
 	}
-	public void clickContinueButton() {
+	public void clickContinueButton() throws InterruptedException {
 		continueButton.click();
-
 		//This zooms the screen out to 70%		
 		JavascriptExecutor js = (JavascriptExecutor)controller.getDriver();
 		js.executeScript("document.body.style.zoom = '0.7'");
-
-		// These steps clicks on the data privacy consent
-//		js.executeScript("arguments[0].scrollIntoView();", dataprivacySubmit);
-//		js.executeScript("arguments[0].click();", dataprivacySubmit);
-
+		Thread.sleep(7000);
 	}
+	
 	public String getTokenPageName() {
 		@SuppressWarnings("deprecation")
 		WebDriverWait wait = new WebDriverWait(controller.getDriver(), 30);
@@ -62,6 +58,7 @@ public class tokenPage {
 	public String getDashboardName() {
 		return (dashboardName.getText());
 	}
+	
 	public void checkTokenPage() {
 		controller.getDriver().getPageSource().contains("BVN");
 	}

@@ -1,9 +1,5 @@
 package stepDefinitions;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
 import io.cucumber.java.en.*;
 
 import pages.httpErrorPage;
@@ -34,18 +30,18 @@ public class transfers{
 		httpErrorPage.clickAdvancedButton();
 		httpErrorPage.clickRedirectLink();
 		loginPage.checkLoginButton();
-		loginPage.setLoginUserID("0015969269");
-		loginPage.setPassword("Test@12345");
+		loginPage.setLoginUserID("0004524208");
+		loginPage.setPassword("Test@123456");
 		loginPage.clickLoginButton();
 	}
 
 	@And("entered a valid token")
-	public void entered_a_valid_token() {
+	public void entered_a_valid_token() throws InterruptedException {
 		tokenPage.getTokenPageName();
 		controller.getDriver().getPageSource().contains("WELCOME");
 		tokenPage.setTokenInput("12345");
 		tokenPage.clickContinueButton();
-	}
+			}
 
 	@When("user clicks on the transfers link")
 	public void user_clicks_on_the_transfers_link() throws InterruptedException {

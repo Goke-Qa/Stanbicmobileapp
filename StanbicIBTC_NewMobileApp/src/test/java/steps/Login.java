@@ -1,38 +1,22 @@
 package steps;
-import java.net.MalformedURLException;
-import java.net.URL;
 
-import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
-import io.appium.java_client.remote.MobileCapabilityType;
+
 import io.cucumber.java.en.*;
+import mobileScreens.DriverFactory;
+import mobileScreens.LoginScreen;
 public class Login {
-	 AppiumDriver<MobileElement> driver;
-	@Given("user has launched the App")
-	public void user_has_launched_the_app() throws MalformedURLException {
-		DesiredCapabilities caps = new DesiredCapabilities(); 
-		caps.setCapability(CapabilityType.PLATFORM_NAME, "ANDROID");
-		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus");
-		caps.setCapability(MobileCapabilityType.UDID, "emulator-5554");
-		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
-		//caps.setCapability("app", "StanbicIBTC_NewMobileApp//src//test//resources//apps//MobileApp_UAT.apk");
-		caps.setCapability("appPackage", "com.stanbicibtc.mobile");
-		caps.setCapability("appActivity", "com.stanbicibtc.mobile.MainActivity");
-		URL url = new URL("http://127.0.0.1:4723/wd/hub");
-		driver = new AppiumDriver<MobileElement>(url,caps);
+	
+	DriverFactory driverFactory = new DriverFactory();
+	LoginScreen loginScreen = new LoginScreen();
+	
+	@Given("user selects the MyBank menu")
+	public void user_selects_the_my_bank_menu() throws InterruptedException {
+		loginScreen.clickMyBankMenu();
 	}
 
-	@When("user selects the MyBank menu")
-	public void user_selects_the_my_bank_menu() {
-	 
-	}
-
-	@And("clicks on the login arrow")
-	public void clicks_on_the_login_arrow() {
+	@When("user clicks on the login arrow")
+	public void user_clicks_on_the_login_arrow() {
 	    
 	}
 
