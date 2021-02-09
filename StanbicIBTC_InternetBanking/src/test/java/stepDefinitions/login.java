@@ -1,7 +1,6 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
-
 import pages.httpErrorPage;
 import pages.loginPage;
 import pages.tokenPage;
@@ -40,13 +39,12 @@ public class login{
 		this.loginPage.checkLoginButton();
 	}
 
-	@When("user enters valid {string} and {string}")
-	public void user_enters_valid_and_test(String username, String password) {
-		this.loginPage.setLoginUserID(username);
-		this.loginPage.setPassword(password);
-
+	@When("^user enters valid \"([^\"]*)\" and \"([^\"]*)\"$") 
+	public void user_enters_valid_and(String username, String password) {
+		loginPage.setLoginUserID(username);
+		loginPage.setPassword(password);
 	}
-
+	
 	@And("clicks on the login button")
 	public void clicks_on_the_login_button() {
 		this.loginPage.clickLoginButton();
@@ -64,7 +62,7 @@ public class login{
 	}
 
 	@And("clicks on the continue  button")
-	public void clicks_on_the_continue_button() {
+	public void clicks_on_the_continue_button() throws InterruptedException {
 		this.tokenPage.clickContinueButton();
 	}
 
