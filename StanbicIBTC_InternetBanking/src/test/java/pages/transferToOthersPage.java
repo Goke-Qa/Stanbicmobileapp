@@ -1,15 +1,12 @@
 package pages;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import stepDefinitions.Controller;
 
@@ -125,9 +122,6 @@ public class transferToOthersPage {
 
 	public void clickContinue() {
 		JavascriptExecutor js = (JavascriptExecutor)controller.getDriver();
-		/* WebDriverWait wait = new WebDriverWait(controller.getDriver(), 150);
-		WebElement continueBTN = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/app-root/app-default-layout/div/div/main/app-transfer/div/div/div/div/div/div[3]/div/div/app-one-time-transfer/mat-card/mat-card-content/div/mat-horizontal-stepper/div[2]/div[1]/div/div[1]/form/div[5]/div/button[1]")));
-		 */
 		js.executeScript("arguments[0].click();", btn_continueButton);
 	}
 

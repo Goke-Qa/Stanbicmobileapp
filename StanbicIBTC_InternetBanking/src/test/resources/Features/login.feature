@@ -15,4 +15,4 @@ Feature: Login
 
     Examples: 
       | username   | password   |
-      | 0004524208 | Test@123456 |
+      | 0015969269 | Test123@4 |

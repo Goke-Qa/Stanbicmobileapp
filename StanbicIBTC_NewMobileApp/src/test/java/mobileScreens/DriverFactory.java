@@ -30,7 +30,7 @@ public class DriverFactory {
 		caps.setCapability("appActivity", "com.stanbicibtc.mobile.MainActivity");
 		URL url = new URL("http://127.0.0.1:4723/wd/hub");
 		driver = new AppiumDriver<MobileElement>(url,caps);
-		waitVar = new WebDriverWait (driver, 100);
+		waitVar = new WebDriverWait (driver, 300);
 	}
 	
 	
