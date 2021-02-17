@@ -1,9 +1,11 @@
 stepDefinitions\Controller.class
-stepDefinitions\TestRunner.class
 stepDefinitions\login.class
-pages\loginPage.class
+pages\logoutPage.class
 stepDefinitions\setUp.class
 pages\tokenPage.class
+stepDefinitions\TestRunner.class
+stepDefinitions\logout.class
+pages\loginPage.class
 pages\transferToOthersPage.class
 pages\transferToSelfPage.class
 pages\httpErrorPage.class

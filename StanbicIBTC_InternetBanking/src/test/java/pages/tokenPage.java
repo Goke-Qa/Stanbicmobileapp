@@ -44,7 +44,7 @@ public class tokenPage {
 		continueButton.click();
 		//This zooms the screen out to 70%		
 		JavascriptExecutor js = (JavascriptExecutor)controller.getDriver();
-		js.executeScript("document.body.style.zoom = '0.7'");
+		js.executeScript("document.body.style.zoom = '0.6'");
 		Thread.sleep(7000);
 	}
 	

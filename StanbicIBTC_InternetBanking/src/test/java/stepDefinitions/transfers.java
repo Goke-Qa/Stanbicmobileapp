@@ -1,7 +1,6 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
-
 import pages.httpErrorPage;
 import pages.loginPage;
 import pages.tokenPage;
@@ -18,31 +17,34 @@ public class transfers{
 
 	public transfers(Controller controller) {
 		this.controller = controller;
-		httpErrorPage = new  httpErrorPage(this.controller);
 		loginPage = new loginPage(this.controller);
-		tokenPage = new  tokenPage(this.controller);
 		transferToSelfPage = new transferToSelfPage(this.controller);
 		transferToOthersPage = new transferToOthersPage(this.controller);
 	}
 
-	@Given("user has logged in successfully")
-	public void user_has_logged_in_successfully() {
-		httpErrorPage.clickAdvancedButton();
-		httpErrorPage.clickRedirectLink();
-		loginPage.checkLoginButton();
-		loginPage.setLoginUserID("0004524208");
-		loginPage.setPassword("Test@123456");
-		loginPage.clickLoginButton();
+//	@Given("user has logged in successfully")
+//	public void user_has_logged_in_successfully() {
+//		httpErrorPage.clickAdvancedButton();
+//		httpErrorPage.clickRedirectLink();
+//		loginPage.checkLoginButton();
+//		loginPage.setLoginUserID("0015969269");
+//		loginPage.setPassword("Test123@4");
+//		loginPage.clickLoginButton();
+//	}
+//
+//	@And("entered a valid token")
+//	public void entered_a_valid_token() throws InterruptedException {
+//		tokenPage.getTokenPageName();
+//		controller.getDriver().getPageSource().contains("WELCOME");
+//		tokenPage.setTokenInput("12345");
+//		tokenPage.clickContinueButton();
+//			}
+
+	@Given("user has logged in successfully and entered a valid token")
+	public void user_has_logged_in_successfully_and_entered_a_valid_token() throws InterruptedException {
+	   loginPage.successfulLogin();
 	}
-
-	@And("entered a valid token")
-	public void entered_a_valid_token() throws InterruptedException {
-		tokenPage.getTokenPageName();
-		controller.getDriver().getPageSource().contains("WELCOME");
-		tokenPage.setTokenInput("12345");
-		tokenPage.clickContinueButton();
-			}
-
+	
 	@When("user clicks on the transfers link")
 	public void user_clicks_on_the_transfers_link() throws InterruptedException {
 		transferToOthersPage.clickTransfersLink();

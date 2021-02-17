@@ -1,8 +1,8 @@
 Feature: Transfers
 
   Background: User has logged in and entered token
-    Given user has logged in successfully
-    And entered a valid token
+    Given user has logged in successfully and entered a valid token 
+   
 
   #@functional
   #Scenario Outline: Transfer to Others
