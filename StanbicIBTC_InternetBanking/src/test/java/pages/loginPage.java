@@ -53,7 +53,6 @@ public class loginPage {
 		controller.getDriver().getPageSource().contains("WELCOME");
 		tokenPage.setTokenInput("12345");
 		tokenPage.clickContinueButton();
-		
 	}
 
 }
