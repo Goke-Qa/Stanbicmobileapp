@@ -14,8 +14,8 @@ public class Hooks {
 		driverFactory.createDriver();
     }
  
-    @After
+   @After
     public void quitDriverSession() {
-    	driverFactory.tearDown();
+ //   	driverFactory.tearDown();
     }
 }

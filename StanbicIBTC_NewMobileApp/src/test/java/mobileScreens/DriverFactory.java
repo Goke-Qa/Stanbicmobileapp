@@ -21,9 +21,9 @@ public class DriverFactory {
 	public void createDriver() throws MalformedURLException, InterruptedException{
 		DesiredCapabilities caps = new DesiredCapabilities(); 
 		caps.setCapability(CapabilityType.PLATFORM_NAME, "ANDROID");
-		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus");
-		caps.setCapability(MobileCapabilityType.UDID, "emulator-5554");
+		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10");
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus 5 API 29");
+		//caps.setCapability(MobileCapabilityType.UDID, "emulator-5554");
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
 		//caps.setCapability("app", "StanbicIBTC_NewMobileApp//src//test//resources//apps//MobileApp_UAT.apk");
 		caps.setCapability("appPackage", "com.stanbicibtc.mobile");

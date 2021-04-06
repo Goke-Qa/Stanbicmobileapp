@@ -23,7 +23,7 @@ public class LoginScreen extends DriverFactory{
 	}
 	
 	public void verifyLoginScreen() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_login));
+		waitVar.until(ExpectedConditions.visibilityOfElementLocated(txt_internetbankingID));
 	}
 	
 	public void enterLoginCreds(String userID, String password) {
