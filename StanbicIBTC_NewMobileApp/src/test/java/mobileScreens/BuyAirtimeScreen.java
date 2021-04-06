@@ -90,7 +90,7 @@ public class BuyAirtimeScreen extends DriverFactory {
 		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enterpin));
 	}
 	public void clickpin() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_1));
+		//waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_1));
 		driver.findElement(btn_1).click();
 		driver.findElement(btn_2).click();
 		driver.findElement(btn_3).click();
