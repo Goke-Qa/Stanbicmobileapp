@@ -36,6 +36,11 @@
 			<version>4.13.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency> 
+		<groupId>com.apple</groupId> 
+		<artifactId>AppleJavaExtensions</artifactId> 
+		<version>1.4</version> 
+		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
 		<dependency>
