@@ -1,12 +1,20 @@
 package steps;
+import context.TestContext;
+
 import io.cucumber.java.en.*;
 import mobileScreens.CreateAccountScreen;
-import mobileScreens.DriverFactory;
 import mobileScreens.LoginScreen;
+
 public class Login {
+	TestContext testContext;
+	LoginScreen loginScreen;
+	CreateAccountScreen createAccountScreen;
 	
-	LoginScreen loginScreen = new LoginScreen();
-	CreateAccountScreen createAccountScreen = new CreateAccountScreen();
+	public Login(TestContext context) {
+		testContext = context;
+		loginScreen =  testContext.getPageObjectManager().getLoginScreen();
+		createAccountScreen =  testContext.getPageObjectManager().getCreateAccountScreen();
+		}
 	
 	@Given("user selects the MyBank menu")
 	public void user_selects_the_my_bank_menu() {

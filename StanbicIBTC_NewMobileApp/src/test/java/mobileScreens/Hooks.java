@@ -1,21 +1,18 @@
 package mobileScreens;
 
-import java.net.MalformedURLException;
-
+import context.TestContext;
 import io.cucumber.java.After;
-import io.cucumber.java.Before;
 
 public class Hooks {
 
-	DriverFactory driverFactory = new DriverFactory();
-	
-	@Before
-    public void createDriverSession() throws MalformedURLException, InterruptedException{
-		driverFactory.createDriver();
-    }
- 
-   @After
-    public void quitDriverSession() {
- //   	driverFactory.tearDown();
-    }
+	TestContext testContext = new TestContext();
+	 
+	 public Hooks(TestContext context) {
+	 testContext = context;
+	  }
+	  
+    @After
+   public void quitDriverSession() {
+   	testContext.getDriverManager().closeDriver();
+   }
 }

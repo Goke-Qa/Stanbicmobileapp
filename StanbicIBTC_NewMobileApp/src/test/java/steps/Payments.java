@@ -1,5 +1,6 @@
 package steps;
 
+import context.TestContext;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import mobileScreens.BuyAirtimeScreen;
@@ -9,13 +10,21 @@ import mobileScreens.LoginScreen;
 import mobileScreens.PayBillsScreen;
 
 public class Payments {
+	TestContext testContext;
+	LoginScreen loginscreen;
+	CreateAccountScreen createAccountScreen;
+	BuyAirtimeScreen buyairtimescreen;
+	BuyDataScreen buydatascreen;
+	PayBillsScreen paybillsscreen;
 	
-	LoginScreen loginscreen = new LoginScreen();
-	CreateAccountScreen createAccountScreen = new CreateAccountScreen();
-	BuyAirtimeScreen buyairtimescreen = new BuyAirtimeScreen();
-	BuyDataScreen buydatascreen = new BuyDataScreen();
-	PayBillsScreen paybillsscreen = new PayBillsScreen();
-	
+	public Payments(TestContext context) {
+		testContext = context;
+		loginscreen =  testContext.getPageObjectManager().getLoginScreen();
+		createAccountScreen =  testContext.getPageObjectManager().getCreateAccountScreen();
+		buyairtimescreen = testContext.getPageObjectManager().getBuyAirtimeScreen();
+		buydatascreen = testContext.getPageObjectManager().getBuyDataScreen();
+		paybillsscreen = testContext.getPageObjectManager().getPayBillsScreen();
+		}
 	
 	@And("click on payments icon")
 	public void click_on_payments_icon() {

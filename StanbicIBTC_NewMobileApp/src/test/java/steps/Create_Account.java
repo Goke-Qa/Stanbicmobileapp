@@ -1,17 +1,23 @@
 package steps;
 
+import context.TestContext;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import mobileScreens.CreateAccountScreen;
-import mobileScreens.DriverFactory;
 import mobileScreens.LoginScreen;
 
 public class Create_Account {
+	TestContext testContext;
+	CreateAccountScreen createAccountScreen;
+	LoginScreen loginscreen;
 	
-	CreateAccountScreen createAccountScreen = new CreateAccountScreen();
-	LoginScreen loginscreen = new LoginScreen();
+	public Create_Account(TestContext context) {
+		testContext = context;
+		loginscreen =  testContext.getPageObjectManager().getLoginScreen();
+		createAccountScreen =  testContext.getPageObjectManager().getCreateAccountScreen();
+		}
 	
 	@Given("user has logged into the app")
 	public void user_has_logged_into_the_app() {

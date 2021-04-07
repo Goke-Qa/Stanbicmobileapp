@@ -1,5 +1,6 @@
 package steps;
 
+import context.TestContext;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import mobileScreens.CreateAccountScreen;
@@ -7,10 +8,17 @@ import mobileScreens.LoginScreen;
 import mobileScreens.LogoutScreen;
 
 public class Logout {
+	TestContext testContext;
+	LoginScreen loginscreen;
+	CreateAccountScreen createaccountscreen;
+	LogoutScreen logoutscreen;
 	
-	LoginScreen loginscreen = new LoginScreen();
-	CreateAccountScreen createaccountscreen = new CreateAccountScreen();
-	LogoutScreen logoutscreen = new LogoutScreen();
+	public Logout(TestContext context) {
+		testContext = context;
+		loginscreen =  testContext.getPageObjectManager().getLoginScreen();
+		createaccountscreen =  testContext.getPageObjectManager().getCreateAccountScreen();
+		logoutscreen = testContext.getPageObjectManager().getLogoutScreen();
+		}
 	
 	@And("user is on the dashboard")
 	public void user_is_on_the_dashboard() {

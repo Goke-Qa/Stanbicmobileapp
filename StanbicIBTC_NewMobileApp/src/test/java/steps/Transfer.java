@@ -1,20 +1,28 @@
 package steps;
 
+import context.TestContext;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import mobileScreens.CreateAccountScreen;
 import mobileScreens.LoginScreen;
 import mobileScreens.TransferToOthersScreen;
 import mobileScreens.TransferToStanbicIBTCAccountScreen;
 
 public class Transfer {
+	TestContext testContext;
+	LoginScreen loginscreen;
+	CreateAccountScreen createAccountScreen;
+	TransferToOthersScreen transfertoothersscreen;
+	TransferToStanbicIBTCAccountScreen transfertostanbicibtcaccountscreen;
 	
-	LoginScreen loginscreen = new LoginScreen();
-	CreateAccountScreen createAccountScreen = new CreateAccountScreen();
-	TransferToOthersScreen transfertoothersscreen = new TransferToOthersScreen();
-	TransferToStanbicIBTCAccountScreen transfertostanbicibtcaccountscreen = new TransferToStanbicIBTCAccountScreen();
+	public Transfer(TestContext context) {
+		testContext = context;
+		loginscreen =  testContext.getPageObjectManager().getLoginScreen();
+		createAccountScreen =  testContext.getPageObjectManager().getCreateAccountScreen();
+		transfertoothersscreen =  testContext.getPageObjectManager().getTransferToOthersScreen();
+		transfertostanbicibtcaccountscreen =  testContext.getPageObjectManager().getTransferToStanbicIBTCAccountScreen();
+		}
 	
 	@Given("user has successfully logged into the app")
 	public void user_has_successfully_logged_into_the_app() {

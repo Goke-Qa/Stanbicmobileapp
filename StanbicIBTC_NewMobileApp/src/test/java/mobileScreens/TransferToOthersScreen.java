@@ -1,10 +1,11 @@
 package mobileScreens;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
-public class TransferToOthersScreen extends DriverFactory {
-	
+public class TransferToOthersScreen{
+	WebDriver driver;
 	By btn_transfer = By.xpath("//android.view.ViewGroup[@content-desc=\"Transfer\"]/android.widget.TextView");
 	By btn_transfertoselfdesc = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView");
 	By btn_transfertootherbanks = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[4]/android.widget.TextView");
@@ -31,31 +32,36 @@ public class TransferToOthersScreen extends DriverFactory {
 	By btn_4 = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup[1]/android.widget.TextView");
 	By btn_done = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.TextView");
 	
+	public TransferToOthersScreen(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
 	public void clicktransferButton() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_transfer));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_transfer));
 		driver.findElement(btn_transfer).click();
 	}
 	
 	public void verifytransferScreen() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_transfertoselfdesc));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_transfertoselfdesc));
 	}
 	
 	public void clicktransferToOtherBanks() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_transfertootherbanks));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_transfertootherbanks));
 		driver.findElement(btn_transfertootherbanks).click();
 	}
 	
 	public void verifyAccountToDebitScreen() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectaccounttodebitdesc));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectaccounttodebitdesc));
 	}
 	
 	public void clickaccountToDebit() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectaccount));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectaccount));
 		driver.findElement(btn_selectaccount).click();
 	}
 	
 	public void verifyaccountNumberScreen() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enteraccountnumberdesc));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enteraccountnumberdesc));
 	}
 	
 	public void enteraccountNumber() {
@@ -73,12 +79,12 @@ public class TransferToOthersScreen extends DriverFactory {
 //	}
 	
 	public void verifyamountScreen() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enteramountdesc));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enteramountdesc));
 	
 	}
 	
 	public void clickamount() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_5));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_5));
 		driver.findElement(btn_5).click();
 		driver.findElement(btn_0).click();
 		driver.findElement(btn_0).click();
@@ -87,30 +93,30 @@ public class TransferToOthersScreen extends DriverFactory {
 	}
 	
 	public void verifyreasonForPayment() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_schedulethispaymentdesc));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_schedulethispaymentdesc));
 		driver.findElement(txt_moneyfor).sendKeys("School Fees");
 	}
 	
 	public void clickcontinue() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_continue1));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_continue1));
 		driver.findElement(btn_continue1).click();
 	}
 	
 	public void verifytransferSummary() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_summarydesc));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_summarydesc));
 	}
 	
 	public void clickconfirm() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_confirm));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_confirm));
 		driver.findElement(btn_confirm).click();
 	}
 	
 	public void verifyenterPINscreen() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enterpindesc));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enterpindesc));
 	}
 	
 	public void clickPIN() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_1));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_1));
 		driver.findElement(btn_1).click();
 		driver.findElement(btn_2).click();
 		driver.findElement(btn_3).click();
@@ -118,7 +124,7 @@ public class TransferToOthersScreen extends DriverFactory {
 	}
 	
 	public void clickDone() {
-		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_done));
+	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_done));
 		driver.findElement(btn_done).click();
 	}
 }
