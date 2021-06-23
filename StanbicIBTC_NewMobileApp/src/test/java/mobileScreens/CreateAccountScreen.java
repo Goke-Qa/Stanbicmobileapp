@@ -19,16 +19,13 @@ public class CreateAccountScreen{
 	}
 	
 	public void verifydashboard() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_home));
 	}
 	
 	public void clickprofileButton() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_profile));
 		driver.findElement(btn_profile).click();
 	}
 	
 	public void verifyProfileScreen() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_shareapp));
 		
 	}
 	

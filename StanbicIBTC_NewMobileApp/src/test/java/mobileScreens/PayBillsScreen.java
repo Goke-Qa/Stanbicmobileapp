@@ -32,67 +32,53 @@ public class PayBillsScreen{
 	}
 	
 	public void clickpayBills() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_paybills));
 		driver.findElement(btn_paybills).click();	
 	}
 	
 	public void verifybillPayments() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_billpayments));
 	}
 	
 	public void clickdstv() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_dstv));
 		driver.findElement(btn_dstv).click();
 	}
 	
 	public void verifyselectaccounttoDebit() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectaccounttodebit));
 	}
 	
 	public void clickaccounttoDebit() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_accounttodebit));
 		driver.findElement(btn_accounttodebit).click();
 	}
 	
 	public void verifycontinue() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_continue));
 	}
 	
 	public void enterCreds() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_dstvcardnumber));
 		driver.findElement(btn_dstvcardnumber).sendKeys("7030188972");
 	}
 	
 	public void clickselectPlan() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectplan));
 		driver.findElement(btn_selectplan).click();
 	}
 	
 	public void clickcompact() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_compact));
 		driver.findElement(btn_compact).click();
 	}
 	
 	public void clickcontinue1() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_continue1));
 		driver.findElement(btn_continue1).click();
 	}
 	
 	public void verifysummary() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_summary));
 	}
 	
 	public void clickconfirm() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_confirm));
 		driver.findElement(btn_confirm).click();
 	}
 	
 	public void verifyenterPIN() {
-//		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enterpin));
 	}
 	
 	public void clickPIN() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_1));
 		driver.findElement(btn_1).click();
 		driver.findElement(btn_2).click();
 		driver.findElement(btn_3).click();
@@ -100,7 +86,6 @@ public class PayBillsScreen{
 	}
 	
 	public void clickDone() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_done));
 		driver.findElement(btn_done).click();
 	}
 }

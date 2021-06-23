@@ -24,7 +24,7 @@ public class Create_Account {
 		loginscreen.clickMyBankMenu();
 		loginscreen.clickLoginArrow();
 		loginscreen.verifyLoginScreen();
-		loginscreen.enterLoginCreds("0015969269", "Test123@4");
+		loginscreen.enterLoginCreds("0015969269", "Test@123456");
 		loginscreen.clickLoginButton();
 		
 	}

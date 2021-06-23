@@ -2,9 +2,12 @@ package steps;
 
 import context.TestContext;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import mobileScreens.BuyAirtimeScreen;
 import mobileScreens.BuyDataScreen;
+import mobileScreens.CorporateBillersScreen;
 import mobileScreens.CreateAccountScreen;
 import mobileScreens.LoginScreen;
 import mobileScreens.PayBillsScreen;
@@ -16,6 +19,7 @@ public class Payments {
 	BuyAirtimeScreen buyairtimescreen;
 	BuyDataScreen buydatascreen;
 	PayBillsScreen paybillsscreen;
+	CorporateBillersScreen corporatebillersscreen;
 	
 	public Payments(TestContext context) {
 		testContext = context;
@@ -24,6 +28,7 @@ public class Payments {
 		buyairtimescreen = testContext.getPageObjectManager().getBuyAirtimeScreen();
 		buydatascreen = testContext.getPageObjectManager().getBuyDataScreen();
 		paybillsscreen = testContext.getPageObjectManager().getPayBillsScreen();
+		corporatebillersscreen = testContext.getPageObjectManager().getCorporateBillersScreen();
 		}
 	
 	@And("click on payments icon")
@@ -138,6 +143,41 @@ public class Payments {
 	   paybillsscreen.clickPIN();
 	   paybillsscreen.clickDone();
 	}
+	
+	/*
+	The steps below are solely for "Corporate Billers"
+	 */
+	
+	@And("click on the payments icon")
+	public void click_on_the_payments_icon() {
+		corporatebillersscreen.clickpayment();
+	   
+	}
+
+	@Then("click on Corporate Billers")
+	public void click_on_corporate_billers() {
+		corporatebillersscreen.clickcorporateBillers();
+	}
+
+	@Then("select Government")
+	public void select_government() {
+		corporatebillersscreen.clickgovernment();
+	}
+
+	@When("you click on revpay")
+	public void you_click_on_revpay() {
+		corporatebillersscreen.clickrevpay();
+	}
+
+	@Then("continue")
+	public void continue1() {
+		corporatebillersscreen.clickaccounttoDebit();
+		corporatebillersscreen.clickwebGUID();
+		corporatebillersscreen.clickyes();
+		corporatebillersscreen.clickcontinue();
+		corporatebillersscreen.enterCreds();
+	    corporatebillersscreen.clickcontinue1();
+	}
+
+	
 }
-
-

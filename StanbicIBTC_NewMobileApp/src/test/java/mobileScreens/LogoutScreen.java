@@ -19,18 +19,15 @@ public class LogoutScreen {
 	}
 	
 	public void verifyHome() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_home));
 		
 	}
 	
 	public void clickLogout() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_logout));
 		driver.findElement(btn_logout).click();
 		
 	}
 	
 	public void clickYes() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_yes));
 		driver.findElement(btn_yes).click();
 	}
 }

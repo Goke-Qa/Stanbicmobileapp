@@ -39,25 +39,21 @@ public class BuyAirtimeScreen{
 		driver.findElement(btn_payments).click();
 }
 	public void verifypaymentspage() {
-		//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_howwillyouliketopay));
 	}
 	public void clickbuyairtime() {
 		driver.findElement(btn_buyairtime).click();
 	}
 	public void verifybuyairtimepage() {
-		//waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_recenttransactions));
 	}
 	public void clickbuyairtime1() {
 		driver.findElement(btn_buyairtime1).click();
 	}
 	public void verifygoogleenable() {
-		//waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_googleenable));	
 	}
 	public void clickallow() {
 		driver.findElement(btn_allow).click();
 	}
 	public void verifyairtimepage() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectnetwork));
 	}
 	public void clickmtn() {
 		driver.findElement(btn_mtn).click();
@@ -72,19 +68,16 @@ public class BuyAirtimeScreen{
 		driver.findElement(btn_next).click();
 	}
 	public void verifyaccounttodebitpage() {
-		//waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectaccounttodebitfrom));
 	}
 	public void clickaccounttodebit() {
 		driver.findElement(btn_accounttodebit).click();
 	}
 	public void verifysummarypage() {
-		//waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_summary));
 	}
 	public void clickconfirm() {
 		driver.findElement(btn_confirm).click();
 	}
 	public void verifypinpage() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enterpin));
 	}
 	public void clickpin() {
 		driver.findElement(btn_1).click();

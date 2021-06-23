@@ -27,7 +27,6 @@ public class LoginScreen{
 	}
 	
 	public void verifyLoginScreen() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(txt_internetbankingID));
 	}
 	
 	public void enterLoginCreds(String userID, String password) {

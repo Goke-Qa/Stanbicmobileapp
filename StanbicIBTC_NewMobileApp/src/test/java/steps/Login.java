@@ -33,7 +33,7 @@ public class Login {
 
 	@When("user enters a valid username and password")
 	public void user_enters_a_valid_username_and_password() {
-		loginScreen.enterLoginCreds("0015969269", "Test123@4");
+		loginScreen.enterLoginCreds("0015969269", "Test@123456");
 	}
 	
 	@And("clicks on the login button")
