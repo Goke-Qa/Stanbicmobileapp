@@ -6,6 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import mobileScreens.CreateAccountScreen;
 import mobileScreens.LoginScreen;
+import mobileScreens.TransferToEaseAccountScreen;
 import mobileScreens.TransferToOthersScreen;
 import mobileScreens.TransferToStanbicIBTCAccountScreen;
 
@@ -15,6 +16,7 @@ public class Transfer {
 	CreateAccountScreen createAccountScreen;
 	TransferToOthersScreen transfertoothersscreen;
 	TransferToStanbicIBTCAccountScreen transfertostanbicibtcaccountscreen;
+	TransferToEaseAccountScreen transferToEaseAccountScreen;
 	
 	public Transfer(TestContext context) {
 		testContext = context;
@@ -22,14 +24,15 @@ public class Transfer {
 		createAccountScreen =  testContext.getPageObjectManager().getCreateAccountScreen();
 		transfertoothersscreen =  testContext.getPageObjectManager().getTransferToOthersScreen();
 		transfertostanbicibtcaccountscreen =  testContext.getPageObjectManager().getTransferToStanbicIBTCAccountScreen();
-		}
+		transferToEaseAccountScreen = testContext.getPageObjectManager().getTransferToEaseAccountScreen();
+	}
 	
 	@Given("user has successfully logged into the app")
 	public void user_has_successfully_logged_into_the_app() {
 		loginscreen.clickMyBankMenu();
 		loginscreen.clickLoginArrow();
 		loginscreen.verifyLoginScreen();
-		loginscreen.enterLoginCreds("0015969269", "Test123@4");
+		loginscreen.enterLoginCreds("0015969269", "Test@123456");
 		loginscreen.clickLoginButton();
 		createAccountScreen.verifydashboard();
 	}
@@ -96,5 +99,32 @@ public class Transfer {
 	    transfertoothersscreen.clickPIN();
 	    transfertoothersscreen.clickDone();
 	}
+	
+	/*
+	The steps below are solely for "Transfer to @ease account"
+	 */
+	
+	@And("user should select transfer to @ease account")
+	public void user_should_select_transfer_to_ease_account() {
+		loginscreen.clickMyBankMenu();
+		loginscreen.clickLoginArrow();
+		loginscreen.verifyLoginScreen();
+		loginscreen.enterLoginCreds("0015969269", "Test@123456");
+		loginscreen.clickLoginButton();
+		transferToEaseAccountScreen.clickTransferease();
+		transfertoothersscreen.enteraccountNumber();
+		transfertoothersscreen.clickcontinue();
+	}
+
+	@Then("input Amount1")
+	public void input_amount1() {
+		 transfertoothersscreen.clickamount();
+		 transfertoothersscreen.clickcontinue();
+		 transfertoothersscreen.clickconfirm();
+		 transfertoothersscreen.clickPIN();
+		 transfertoothersscreen.clickDone();
+	   
+	}
+
 }
 	

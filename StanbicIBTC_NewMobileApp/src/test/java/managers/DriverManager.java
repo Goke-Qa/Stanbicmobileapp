@@ -37,7 +37,7 @@ public class DriverManager {
 			e.printStackTrace();
 		}
 		driver = new AppiumDriver<MobileElement>(url,caps);
-		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		return driver;
 	}
 

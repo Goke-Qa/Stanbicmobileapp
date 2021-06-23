@@ -38,53 +38,42 @@ public class TransferToOthersScreen{
 	}
 	
 	public void clicktransferButton() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_transfer));
 		driver.findElement(btn_transfer).click();
 	}
 	
 	public void verifytransferScreen() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_transfertoselfdesc));
 	}
 	
 	public void clicktransferToOtherBanks() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_transfertootherbanks));
 		driver.findElement(btn_transfertootherbanks).click();
 	}
 	
 	public void verifyAccountToDebitScreen() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectaccounttodebitdesc));
 	}
 	
 	public void clickaccountToDebit() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectaccount));
 		driver.findElement(btn_selectaccount).click();
 	}
 	
 	public void verifyaccountNumberScreen() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enteraccountnumberdesc));
 	}
 	
 	public void enteraccountNumber() {
-		//driver.findElement(txt_enteraccountnumber).sendKeys("2000060426");
 		driver.findElement(txt_enteraccountnumber).sendKeys("0021269236");
 	}
 	
 //	public void verifyBankName() {
-//		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectbankdesc));
 //	}
 //	
 //	public void clickzenith() {
-//		waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_zenith));
 //		driver.findElement(btn_zenith).click();
 //	}
 	
 	public void verifyamountScreen() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enteramountdesc));
 	
 	}
 	
 	public void clickamount() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_5));
 		driver.findElement(btn_5).click();
 		driver.findElement(btn_0).click();
 		driver.findElement(btn_0).click();
@@ -93,30 +82,24 @@ public class TransferToOthersScreen{
 	}
 	
 	public void verifyreasonForPayment() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_schedulethispaymentdesc));
 		driver.findElement(txt_moneyfor).sendKeys("School Fees");
 	}
 	
 	public void clickcontinue() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_continue1));
 		driver.findElement(btn_continue1).click();
 	}
 	
 	public void verifytransferSummary() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_summarydesc));
 	}
 	
 	public void clickconfirm() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_confirm));
 		driver.findElement(btn_confirm).click();
 	}
 	
 	public void verifyenterPINscreen() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enterpindesc));
 	}
 	
 	public void clickPIN() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_1));
 		driver.findElement(btn_1).click();
 		driver.findElement(btn_2).click();
 		driver.findElement(btn_3).click();
@@ -124,7 +107,6 @@ public class TransferToOthersScreen{
 	}
 	
 	public void clickDone() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_done));
 		driver.findElement(btn_done).click();
 	}
 }

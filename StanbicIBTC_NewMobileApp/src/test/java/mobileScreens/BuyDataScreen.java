@@ -36,80 +36,63 @@ public class BuyDataScreen{
 	}
 
 	public void clickbuyData() {
-		//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_buydata));
 		driver.findElement(btn_buydata).click();
 	}
 
 	public void verifygoogleEnable() {
-		//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_googleenable));
 	}
 
 	public void clickgoogleEnable() {
-		//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_allow));
 		driver.findElement(btn_allow).click();
 	}
 
 	public void verifynetworkscreen() {
-		//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectnetwork));
 	}
 
 	public void clickmtn() {
-		//waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_mtn));
 		driver.findElement(btn_mtn).click();
 	}
 
 	public void verifydataplan() {
-		//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectdataplan));
 	}
 
 	public void enterCreds() {
-		//waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enterphonenumber));
 		driver.findElement(btn_enterphonenumber).sendKeys("08166583776");
 	}
 
 	public void clickdataPlan() {
-		//waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectdataplan));
 		driver.findElement(btn_selectdataplan).click();
 	}
 
 	public void clickxtraTalk() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_xtratalk1000));
 		driver.findElement(btn_xtratalk1000).click();
 	}
 
 	public void verifytaptosaveNumber() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_taptosavenumber));
 	}
 
 	public void clicknext() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_next));
 		driver.findElement(btn_next).click();
 	}
 
 	public void verifyselectaccounttoDebit() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_selectaccounttodebit));
 	}
 
 	public void clickaccounttoDebit() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_accounttodebit));
 		driver.findElement(btn_accounttodebit).click();
 	}
 
 	public void verifysummary() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_summary));
 	}
 
 	public void clickconfirm() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_confirm));
 		driver.findElement(btn_confirm).click();
 	}
 
 	public void verifyenterPIN() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_enterpin));
 	}
 
 	public void clickpin() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_1));
 		driver.findElement(btn_1).click();
 		driver.findElement(btn_2).click();
 		driver.findElement(btn_3).click();
@@ -118,11 +101,9 @@ public class BuyDataScreen{
 	}
 
 	public void verifydonePage() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_datapurchased));
 
 	}
 	public void clickdone() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_done));
 		driver.findElement(btn_done).click();
 
 	}

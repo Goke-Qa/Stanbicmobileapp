@@ -14,7 +14,6 @@ public class TransferToStanbicIBTCAccountScreen{
 	}
 	
 	public void clickTransfertoStanbicIBTCAccount() {
-	//	waitVar.until(ExpectedConditions.visibilityOfElementLocated(btn_transfertostanbicibtcaccount));
 		driver.findElement(btn_transfertostanbicibtcaccount).click();
 	}
 
