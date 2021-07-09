@@ -11,8 +11,8 @@ public class Hooks {
 	 testContext = context;
 	  }
 	  
-    @After
-   public void quitDriverSession() {
-   	testContext.getDriverManager().closeDriver();
+//    @After
+//   public void quitDriverSession() {
+//   	testContext.getDriverManager().closeDriver();
    }
-}
+

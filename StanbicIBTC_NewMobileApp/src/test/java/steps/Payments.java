@@ -108,8 +108,10 @@ public class Payments {
 	 */
 
 	@Then("click on pay bills")
-	public void click_on_pay_bills() {
+	public void click_on_pay_bills() throws Exception {
 	   paybillsscreen.clickpayBills();
+	   Thread.sleep(5000);
+	   paybillsscreen.clickBillers();
 	   paybillsscreen.verifybillPayments();
 	   
 	}
@@ -117,29 +119,32 @@ public class Payments {
 	@And("select platform you are paying for")
 	public void select_platform_you_are_paying_for() {
 	    paybillsscreen.clickdstv();
-	    paybillsscreen.verifyselectaccounttoDebit();
-	    paybillsscreen.clickaccounttoDebit();
-	    paybillsscreen.verifycontinue();
+	}
+	
+	@Then("select account to debit during bills payment")
+	public void select_account_to_debit_during_bills_payment() {
+	   paybillsscreen.clickaccounttoDebit();
 	}
 
 	@Then("input unique numbers of the platform")
-	public void input_unique_numbers_of_the_platform() {
-	    paybillsscreen.enterCreds();
+	public void input_unique_numbers_of_the_platform() throws Exception {
+		Thread.sleep(20000);
+		paybillsscreen.verifyDSTVsubScreen();
+	    paybillsscreen.enterIUC();
 	    
 	}
 
 	@Then("select plan")
 	public void select_plan() {
-		 paybillsscreen.clickselectPlan();
+		paybillsscreen.clickselectPlan();
 		 paybillsscreen.clickcompact();
-		 paybillsscreen.clickcontinue1();
+		 paybillsscreen.clickcontinue();
 	}
 
 	@Then("confirm")
 	public void confirm() {
 	   paybillsscreen.verifysummary();
 	   paybillsscreen.clickconfirm();
-	   paybillsscreen.verifyenterPIN();
 	   paybillsscreen.clickPIN();
 	   paybillsscreen.clickDone();
 	}

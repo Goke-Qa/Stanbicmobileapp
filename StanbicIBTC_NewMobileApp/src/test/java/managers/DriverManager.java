@@ -24,10 +24,9 @@ public class DriverManager {
 		DesiredCapabilities caps = new DesiredCapabilities(); 
 		caps.setCapability(CapabilityType.PLATFORM_NAME, "ANDROID");
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "-Nexus 5 API 29");
+		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "-Pixel 3A API 29");
 		caps.setCapability(MobileCapabilityType.UDID, "emulator-5554");
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
-		//	caps.setCapability("app", "C:\\Users\\A239215\\git\\Single_SignOn\\Single_SignOn\\src\\test\\resources\\apps\\Stanbic OnePass biometrics.apk");
 		caps.setCapability("appPackage", "com.stanbicibtc.mobile");
 		caps.setCapability("appActivity", "com.stanbicibtc.mobile.MainActivity");
 		URL url = null;
@@ -41,8 +40,8 @@ public class DriverManager {
 		return driver;
 	}
 
-	public void closeDriver() {
-		driver.close();
-		driver.quit();
+//	public void closeDriver() {
+//		driver.close();
+//	//	driver.quit();
 	}
-}
+

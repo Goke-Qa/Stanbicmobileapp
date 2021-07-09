@@ -32,7 +32,7 @@ public class Transfer {
 		loginscreen.clickMyBankMenu();
 		loginscreen.clickLoginArrow();
 		loginscreen.verifyLoginScreen();
-		loginscreen.enterLoginCreds("0015969269", "Test@123456");
+		loginscreen.enterLoginCreds("0014493448", "Test12345@6");
 		loginscreen.clickLoginButton();
 		createAccountScreen.verifydashboard();
 	}
@@ -61,7 +61,7 @@ public class Transfer {
 	public void select_bank_name() {
 //		transfertoothersscreen.verifyBankName();
 //	    transfertoothersscreen.clickzenith();
-	    transfertoothersscreen.verifyamountScreen();
+		transfertoothersscreen.verifyamountScreen();
 	    transfertoothersscreen.clickamount();
 	    transfertoothersscreen.clickcontinue();
 	    transfertoothersscreen.verifyreasonForPayment();
@@ -109,7 +109,7 @@ public class Transfer {
 		loginscreen.clickMyBankMenu();
 		loginscreen.clickLoginArrow();
 		loginscreen.verifyLoginScreen();
-		loginscreen.enterLoginCreds("0015969269", "Test@123456");
+		loginscreen.enterLoginCreds("0014493448", "Test12345@6");
 		loginscreen.clickLoginButton();
 		transferToEaseAccountScreen.clickTransferease();
 		transfertoothersscreen.enteraccountNumber();
