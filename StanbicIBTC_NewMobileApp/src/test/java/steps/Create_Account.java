@@ -24,7 +24,7 @@ public class Create_Account {
 		loginscreen.clickMyBankMenu();
 		loginscreen.clickLoginArrow();
 		loginscreen.verifyLoginScreen();
-		loginscreen.enterLoginCreds("0015969269", "Test@123456");
+		loginscreen.enterLoginCreds("0014493448", "Test12345@6");
 		loginscreen.clickLoginButton();
 		
 	}
@@ -46,58 +46,5 @@ public class Create_Account {
 	    
 	    
 	}
-
-	
-	
-	
-//	@Given("user enters a valid username and password")
-//	public void user_enters_a_valid_username_and_password() {
-//		createAccountScreen.enterLoginCreds("0015969269", "Test123@4");
-//	}
-//	
-//	@Then("clicks on the login button")
-//	public void clicks_on_the_login_button() {
-//		createAccountScreen.clickLoginButton();
-//	}
-//
-//	@And("user is navigated to the dashboard")
-//	public void user_is_navigated_to_the_dashboard() {
-//	   
-//	}
-//
-//	@When("user click on profile icon")
-//	public void user_click_on_profile_icon() {
-//	    createAccountScreen.clickprofileButton();
-//	}
-//
-//	@Then("user is navigated to the profile screen")
-//	public void user_is_navigated_to_the_profile_screen() {
-//		createAccountScreen.verifyProfileScreen();
-//	   
-//	}
-//
-//	@And("user scroll to the account pane")
-//	public void user_scroll_to_the_account_pane() {
-//	   
-//	}
-//
-//	@Then("user clicks on Create Account")
-//	public void user_clicks_on_create_account() {
-//	    createAccountScreen.clickcreateAccountButton();
-//	    
-//	}
-//
-//	@Then("user input valid BVN and phone number")
-//	public void user_input_valid_bvn_and_phone_number() {
-//	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
-//	}
-//
-//	@And("click on continue button")
-//	public void click_on_continue_button() {
-//	    // Write code here that turns the phrase above into concrete actions
-//	    throw new io.cucumber.java.PendingException();
-//	}
-
 
 }
