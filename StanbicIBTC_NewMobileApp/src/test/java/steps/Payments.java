@@ -8,14 +8,14 @@ import io.cucumber.java.en.When;
 import mobileScreens.BuyAirtimeScreen;
 import mobileScreens.BuyDataScreen;
 import mobileScreens.CorporateBillersScreen;
-import mobileScreens.CreateAccountScreen;
+import mobileScreens.Create_AccountScreen;
 import mobileScreens.LoginScreen;
 import mobileScreens.PayBillsScreen;
 
 public class Payments {
 	TestContext testContext;
 	LoginScreen loginscreen;
-	CreateAccountScreen createAccountScreen;
+	Create_AccountScreen create_AccountScreen;
 	BuyAirtimeScreen buyairtimescreen;
 	BuyDataScreen buydatascreen;
 	PayBillsScreen paybillsscreen;
@@ -24,7 +24,7 @@ public class Payments {
 	public Payments(TestContext context) {
 		testContext = context;
 		loginscreen =  testContext.getPageObjectManager().getLoginScreen();
-		createAccountScreen =  testContext.getPageObjectManager().getCreateAccountScreen();
+		create_AccountScreen =  testContext.getPageObjectManager().getCreate_AccountScreen();
 		buyairtimescreen = testContext.getPageObjectManager().getBuyAirtimeScreen();
 		buydatascreen = testContext.getPageObjectManager().getBuyDataScreen();
 		paybillsscreen = testContext.getPageObjectManager().getPayBillsScreen();
@@ -172,6 +172,11 @@ public class Payments {
 	@When("you click on revpay")
 	public void you_click_on_revpay() {
 		corporatebillersscreen.clickrevpay();
+	}
+	
+	@Then("select account to debit for revpay")
+	public void select_account_to_debit_for_revpay() {
+		
 	}
 
 	@Then("continue")

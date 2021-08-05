@@ -6,7 +6,7 @@ import mobileScreens.Activate_3S_Banking_Screen;
 import mobileScreens.BuyAirtimeScreen;
 import mobileScreens.BuyDataScreen;
 import mobileScreens.CorporateBillersScreen;
-import mobileScreens.CreateAccountScreen;
+import mobileScreens.Create_AccountScreen;
 import mobileScreens.LoginScreen;
 import mobileScreens.LogoutScreen;
 import mobileScreens.PayBillsScreen;
@@ -21,7 +21,7 @@ public class PageObjectManager {
 
 	private BuyAirtimeScreen getBuyAirtimeScreen;
 	private BuyDataScreen getBuyDataScreen;
-	private CreateAccountScreen getCreateAccountScreen;
+	private Create_AccountScreen getCreate_AccountScreen;
 	private LoginScreen getLoginScreen;
 	private LogoutScreen getLogoutScreen;
 	private PayBillsScreen getPayBillsScreen;
@@ -46,9 +46,9 @@ public class PageObjectManager {
 		return (getBuyDataScreen == null) ? getBuyDataScreen = new BuyDataScreen(driver) : getBuyDataScreen;
 	}
 	
-	public  CreateAccountScreen getCreateAccountScreen() {
-
-		return (getCreateAccountScreen == null) ? getCreateAccountScreen = new CreateAccountScreen(driver) : getCreateAccountScreen;
+	public Create_AccountScreen getCreate_AccountScreen() {
+		return (getCreate_AccountScreen == null) ? getCreate_AccountScreen = new Create_AccountScreen(driver) : getCreate_AccountScreen;
+		
 	}
 	
 	public  LoginScreen getLoginScreen() {

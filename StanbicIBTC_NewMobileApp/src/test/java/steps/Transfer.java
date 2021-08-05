@@ -4,7 +4,7 @@ import context.TestContext;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import mobileScreens.CreateAccountScreen;
+import mobileScreens.Create_AccountScreen;
 import mobileScreens.LoginScreen;
 import mobileScreens.TransferToEaseAccountScreen;
 import mobileScreens.TransferToOthersScreen;
@@ -13,7 +13,7 @@ import mobileScreens.TransferToStanbicIBTCAccountScreen;
 public class Transfer {
 	TestContext testContext;
 	LoginScreen loginscreen;
-	CreateAccountScreen createAccountScreen;
+	Create_AccountScreen create_AccountScreen;
 	TransferToOthersScreen transfertoothersscreen;
 	TransferToStanbicIBTCAccountScreen transfertostanbicibtcaccountscreen;
 	TransferToEaseAccountScreen transferToEaseAccountScreen;
@@ -21,7 +21,7 @@ public class Transfer {
 	public Transfer(TestContext context) {
 		testContext = context;
 		loginscreen =  testContext.getPageObjectManager().getLoginScreen();
-		createAccountScreen =  testContext.getPageObjectManager().getCreateAccountScreen();
+		create_AccountScreen =  testContext.getPageObjectManager().getCreate_AccountScreen();
 		transfertoothersscreen =  testContext.getPageObjectManager().getTransferToOthersScreen();
 		transfertostanbicibtcaccountscreen =  testContext.getPageObjectManager().getTransferToStanbicIBTCAccountScreen();
 		transferToEaseAccountScreen = testContext.getPageObjectManager().getTransferToEaseAccountScreen();
@@ -34,7 +34,7 @@ public class Transfer {
 		loginscreen.verifyLoginScreen();
 		loginscreen.enterLoginCreds("0014493448", "Test12345@6");
 		loginscreen.clickLoginButton();
-		createAccountScreen.verifydashboard();
+		create_AccountScreen.verifydashboard();
 	}
 
 	@And("user navigate to the transfer screen")
