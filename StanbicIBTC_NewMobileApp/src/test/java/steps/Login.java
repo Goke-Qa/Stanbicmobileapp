@@ -2,18 +2,18 @@ package steps;
 import context.TestContext;
 
 import io.cucumber.java.en.*;
-import mobileScreens.CreateAccountScreen;
+import mobileScreens.Create_AccountScreen;
 import mobileScreens.LoginScreen;
 
 public class Login {
 	TestContext testContext;
 	LoginScreen loginScreen;
-	CreateAccountScreen createAccountScreen;
+	Create_AccountScreen create_AccountScreen;
 	
 	public Login(TestContext context) {
 		testContext = context;
 		loginScreen =  testContext.getPageObjectManager().getLoginScreen();
-		createAccountScreen =  testContext.getPageObjectManager().getCreateAccountScreen();
+		create_AccountScreen =  testContext.getPageObjectManager().getCreate_AccountScreen();
 		}
 	
 	@Given("user selects the MyBank menu")
@@ -33,7 +33,7 @@ public class Login {
 
 	@When("user enters a valid username and password")
 	public void user_enters_a_valid_username_and_password() {
-		loginScreen.enterLoginCreds("0014493448", "Test12345@6");
+		loginScreen.enterLoginCreds();
 	}
 	
 	@And("clicks on the login button")
@@ -43,7 +43,8 @@ public class Login {
 
 	@Then("user is navigated to the dashboard")
 	public void user_is_navigated_to_the_dashboard() {
-		createAccountScreen.verifydashboard();
-	}
-	
+		loginScreen.click4DigitPIN();
+		
+	   
+}
 }
