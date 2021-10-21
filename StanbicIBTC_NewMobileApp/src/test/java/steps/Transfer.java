@@ -12,7 +12,7 @@ import mobileScreens.TransferToStanbicIBTCAccountScreen;
 
 public class Transfer {
 	TestContext testContext;
-	LoginScreen loginscreen;
+	LoginScreen loginScreen;
 	Create_AccountScreen create_AccountScreen;
 	TransferToOthersScreen transfertoothersscreen;
 	TransferToStanbicIBTCAccountScreen transfertostanbicibtcaccountscreen;
@@ -20,7 +20,7 @@ public class Transfer {
 	
 	public Transfer(TestContext context) {
 		testContext = context;
-		loginscreen =  testContext.getPageObjectManager().getLoginScreen();
+		loginScreen =  testContext.getPageObjectManager().getLoginScreen();
 		create_AccountScreen =  testContext.getPageObjectManager().getCreate_AccountScreen();
 		transfertoothersscreen =  testContext.getPageObjectManager().getTransferToOthersScreen();
 		transfertostanbicibtcaccountscreen =  testContext.getPageObjectManager().getTransferToStanbicIBTCAccountScreen();
@@ -29,11 +29,11 @@ public class Transfer {
 	
 	@Given("user has successfully logged into the app")
 	public void user_has_successfully_logged_into_the_app() {
-		loginscreen.clickMyBankMenu();
-		loginscreen.clickLoginArrow();
-		loginscreen.verifyLoginScreen();
-		loginscreen.enterLoginCreds("0014493448", "Test12345@6");
-		loginscreen.clickLoginButton();
+		loginScreen.clickMyBankMenu();
+		loginScreen.clickLoginArrow();
+		loginScreen.verifyLoginScreen();
+		loginScreen.enterLoginCreds();
+		loginScreen.clickLoginButton();
 		create_AccountScreen.verifydashboard();
 	}
 
@@ -69,7 +69,7 @@ public class Transfer {
 	    transfertoothersscreen.verifytransferSummary();
 	    transfertoothersscreen.clickconfirm();
 	    transfertoothersscreen.verifyenterPINscreen();
-	    transfertoothersscreen.clickPIN();
+	    loginScreen.click4DigitPIN();
 	    
 	}
 	
@@ -96,7 +96,7 @@ public class Transfer {
 	    transfertoothersscreen.verifytransferSummary();
 	    transfertoothersscreen.clickconfirm();
 	    transfertoothersscreen.verifyenterPINscreen();
-	    transfertoothersscreen.clickPIN();
+	    loginScreen.click4DigitPIN();
 	    transfertoothersscreen.clickDone();
 	}
 	
@@ -106,11 +106,11 @@ public class Transfer {
 	
 	@And("user should select transfer to @ease account")
 	public void user_should_select_transfer_to_ease_account() {
-		loginscreen.clickMyBankMenu();
-		loginscreen.clickLoginArrow();
-		loginscreen.verifyLoginScreen();
-		loginscreen.enterLoginCreds("0014493448", "Test12345@6");
-		loginscreen.clickLoginButton();
+		loginScreen.clickMyBankMenu();
+		loginScreen.clickLoginArrow();
+		loginScreen.verifyLoginScreen();
+		loginScreen.enterLoginCreds();
+		loginScreen.clickLoginButton();
 		transferToEaseAccountScreen.clickTransferease();
 		transfertoothersscreen.enteraccountNumber();
 		transfertoothersscreen.clickcontinue();
@@ -121,7 +121,7 @@ public class Transfer {
 		 transfertoothersscreen.clickamount();
 		 transfertoothersscreen.clickcontinue();
 		 transfertoothersscreen.clickconfirm();
-		 transfertoothersscreen.clickPIN();
+		 loginScreen.click4DigitPIN();
 		 transfertoothersscreen.clickDone();
 	   
 	}

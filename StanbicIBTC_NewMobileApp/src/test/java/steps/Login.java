@@ -33,7 +33,7 @@ public class Login {
 
 	@When("user enters a valid username and password")
 	public void user_enters_a_valid_username_and_password() {
-		loginScreen.enterLoginCreds("0014493448", "Test12345@6");
+		loginScreen.enterLoginCreds();
 	}
 	
 	@And("clicks on the login button")
@@ -43,7 +43,7 @@ public class Login {
 
 	@Then("user is navigated to the dashboard")
 	public void user_is_navigated_to_the_dashboard() {
-//		create_AccountScreen.verifydashboard();
+		loginScreen.click4DigitPIN();
 		
 	   
 }

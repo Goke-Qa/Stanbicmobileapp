@@ -14,7 +14,7 @@ import mobileScreens.PayBillsScreen;
 
 public class Payments {
 	TestContext testContext;
-	LoginScreen loginscreen;
+	LoginScreen loginScreen;
 	Create_AccountScreen create_AccountScreen;
 	BuyAirtimeScreen buyairtimescreen;
 	BuyDataScreen buydatascreen;
@@ -23,7 +23,7 @@ public class Payments {
 	
 	public Payments(TestContext context) {
 		testContext = context;
-		loginscreen =  testContext.getPageObjectManager().getLoginScreen();
+		loginScreen =  testContext.getPageObjectManager().getLoginScreen();
 		create_AccountScreen =  testContext.getPageObjectManager().getCreate_AccountScreen();
 		buyairtimescreen = testContext.getPageObjectManager().getBuyAirtimeScreen();
 		buydatascreen = testContext.getPageObjectManager().getBuyDataScreen();
@@ -67,7 +67,7 @@ public class Payments {
 	   buyairtimescreen.verifysummarypage();
 	   buyairtimescreen.clickconfirm();
 	   buyairtimescreen.verifypinpage();
-	   buyairtimescreen.clickpin();
+	   loginScreen.click4DigitPIN();
 	}
 	
 	/*
@@ -98,7 +98,7 @@ public class Payments {
 	    buydatascreen.verifysummary();
 	    buydatascreen.clickconfirm();
 	    buydatascreen.verifyenterPIN();
-	    buydatascreen.clickpin();
+	    loginScreen.click4DigitPIN();
 	    buydatascreen.verifydonePage();
 	    buydatascreen.clickdone();
 	}
@@ -145,7 +145,7 @@ public class Payments {
 	public void confirm() {
 	   paybillsscreen.verifysummary();
 	   paybillsscreen.clickconfirm();
-	   paybillsscreen.clickPIN();
+	   loginScreen.click4DigitPIN();
 	   paybillsscreen.clickDone();
 	}
 	
