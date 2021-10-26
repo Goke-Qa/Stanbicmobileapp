@@ -3,20 +3,36 @@ Feature: Payments
   Background: User has logged into the app
     Given user has successfully logged into the app
 
-  @Functional
-  Scenario Outline: Buy Airtime
-    And click on payments icon
-    Then click on buy airtime
-    And input phone number and amount
-    Then select account to debit
-    Then confirm and input pin
-    
-    #@Functional
-    #Scenario Outline: Buy Data
+  #@Functional
+  #Scenario Outline: Buy Airtime
     #And click on payments icon
-    #Then click on buy data
-    #And input phone number
+    #Then click on buy airtime
+    #And input phone number and amount
     #Then select account to debit
+    #Then confirm and input pin
+    
+  #@Functional
+  #Scenario Outline: Auto Airtime
+  #	And click payments icon
+  #	Then click on auto airtime
+  #	And input phone number & amount
+  #	Then select the account to debit
+  #	And input pin
+  	
+  
+  #@Functional
+  #Scenario Outline: Buy for Self
+  #	And click on the payments icon
+  #	Then click on buy for self
+  #	And proceed to input pin
+  
+    
+    @Functional
+    Scenario Outline: Buy Data
+    And click on payments icon
+    Then click on buy data
+    And input phone number
+    Then select an account to debit
     
     
     #@Functional
@@ -30,7 +46,7 @@ Feature: Payments
     #Then confirm
     
     
-     #@Functional
+    #@Functional
     #Scenario Outline: Corporate Billers
     #And click on the payments icon
     #Then click on Corporate Billers
@@ -40,6 +56,12 @@ Feature: Payments
     #And continue
     
     
+    #@Functional
+    #Scenario Outline: Cardless Withdrawal
+    #	And click on payment sign
+    #	Then click on cardless withdrawal
+    #	And amount and pin
+    	
     
     
     
