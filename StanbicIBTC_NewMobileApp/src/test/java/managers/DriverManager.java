@@ -27,6 +27,8 @@ public class DriverManager {
 		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "-Pixel 3A API 29");
 		caps.setCapability(MobileCapabilityType.UDID, "emulator-5554");
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
+		caps.setCapability("automationName", "UiAutomator2");
+		caps.setCapability("waitForIdleTimeout", 200);
 		caps.setCapability("appPackage", "com.stanbicibtc.mobile");
 		caps.setCapability("appActivity", "com.stanbicibtc.mobile.MainActivity");
 		URL url = null;

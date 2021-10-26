@@ -3,8 +3,11 @@ package managers;
 import org.openqa.selenium.WebDriver;
 
 import mobileScreens.Activate_3S_Banking_Screen;
+import mobileScreens.AutoAirtimeScreen;
 import mobileScreens.BuyAirtimeScreen;
 import mobileScreens.BuyDataScreen;
+import mobileScreens.Buy_for_self_Screen;
+import mobileScreens.Cardless_Withdrawal_Screen;
 import mobileScreens.CorporateBillersScreen;
 import mobileScreens.Create_AccountScreen;
 import mobileScreens.LoginScreen;
@@ -30,7 +33,9 @@ public class PageObjectManager {
 	private CorporateBillersScreen getCorporateBillersScreen;
 	private Activate_3S_Banking_Screen getActivate_3s_Banking_Screen;
 	private TransferToEaseAccountScreen gettranEaseAccountScreen;
-	
+	private AutoAirtimeScreen getautoairtimeScreen;
+	private Buy_for_self_Screen getbuyforselfScreen;
+	private Cardless_Withdrawal_Screen getcardlesswithdrawalScreen;
 	
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -86,5 +91,16 @@ public class PageObjectManager {
 	
 	public TransferToEaseAccountScreen getTransferToEaseAccountScreen() {
 		return (gettranEaseAccountScreen == null) ? gettranEaseAccountScreen = new TransferToEaseAccountScreen(driver) : gettranEaseAccountScreen;
+	}
+	
+	public AutoAirtimeScreen getautoairtimeScreen() {
+		return (getautoairtimeScreen == null) ? getautoairtimeScreen = new AutoAirtimeScreen(driver) : getautoairtimeScreen;
+	}
+	public Buy_for_self_Screen getbuyforselfScreen() {
+		return (getbuyforselfScreen == null) ? getbuyforselfScreen = new Buy_for_self_Screen(driver) : getbuyforselfScreen;
+		
+	}
+	public Cardless_Withdrawal_Screen getcardlesswithdrwalScreen() {
+		return(getcardlesswithdrawalScreen == null) ? getcardlesswithdrawalScreen = new Cardless_Withdrawal_Screen(driver) : getcardlesswithdrawalScreen;
 	}
 }
