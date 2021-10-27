@@ -10,7 +10,7 @@ import mobileScreens.Create_AccountScreen;
 import mobileScreens.LoginScreen;
 import mobileScreens.LogoutScreen;
 import mobileScreens.PayBillsScreen;
-import mobileScreens.TransferToEaseAccountScreen;
+import mobileScreens.TransfersScreens;
 import mobileScreens.TransferToOthersScreen;
 import mobileScreens.TransferToStanbicIBTCAccountScreen;
 
@@ -29,7 +29,7 @@ public class PageObjectManager {
 	private TransferToStanbicIBTCAccountScreen getTransferToStanbicIBTCAccountScreen;
 	private CorporateBillersScreen getCorporateBillersScreen;
 	private Activate_3S_Banking_Screen getActivate_3s_Banking_Screen;
-	private TransferToEaseAccountScreen gettranEaseAccountScreen;
+	private TransfersScreens getTransfersScreen;
 	
 	
 	public PageObjectManager(WebDriver driver) {
@@ -84,7 +84,7 @@ public class PageObjectManager {
 		return (getActivate_3s_Banking_Screen == null) ? getActivate_3s_Banking_Screen = new Activate_3S_Banking_Screen(driver) : getActivate_3s_Banking_Screen;
 	}
 	
-	public TransferToEaseAccountScreen getTransferToEaseAccountScreen() {
-		return (gettranEaseAccountScreen == null) ? gettranEaseAccountScreen = new TransferToEaseAccountScreen(driver) : gettranEaseAccountScreen;
+	public TransfersScreens getTransfersScreen() {
+		return (getTransfersScreen == null) ? getTransfersScreen = new TransfersScreens(driver) : getTransfersScreen;
 	}
 }

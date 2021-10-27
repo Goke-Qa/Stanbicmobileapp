@@ -43,8 +43,7 @@ public class Login {
 
 	@Then("user is navigated to the dashboard")
 	public void user_is_navigated_to_the_dashboard() {
-		loginScreen.click4DigitPIN();
-		
-	   
+		create_AccountScreen.verifydashboard();
+			   
 }
 }
