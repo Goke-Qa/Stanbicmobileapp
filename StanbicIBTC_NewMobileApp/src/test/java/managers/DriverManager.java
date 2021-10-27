@@ -26,27 +26,11 @@ public class DriverManager {
 		DesiredCapabilities caps = new DesiredCapabilities();
 
 		/*
-		 * BroserStack Settings
-		 */
-		/*
-		 * caps.setCapability("app", "bs://5279dc7d925b4910bacde9354ca9e945caf74e88\r\n");
-		 * "bs://5279dc7d925b4910bacde9354ca9e945caf74e88\r\n");
-		 * caps.setCapability("browserstack.user", "uwakmfonedet_VTKkb9");
-		 * caps.setCapability("browserstack.key", "NeediK2eKzhqNYLtpkwx");
-		 * caps.setCapability("device", "Google Pixel 3");
-		 * caps.setCapability("os_version", "9.0"); caps.setCapability("project",
-		 * "Stanbic IBTC Super App"); caps.setCapability("build", "Android build");
-		 * caps.setCapability("name", "MyBank Automated tests"); URL url = null; try {
-		 * url = new URL("http://hub.browserstack.com/wd/hub"); } catch
-		 * (MalformedURLException e) { e.printStackTrace(); }
-		 */
-		/*
 		 * Local Emulator settings
 		 */
 		caps.setCapability("platformName", "Android");
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
-		caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Pixel 3A API 29");
-		caps.setCapability(MobileCapabilityType.UDID, "emulator-5554");
+		caps.setCapability(MobileCapabilityType.UDID, "emulator-5556");
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
 		caps.setCapability("automationName", "UiAutomator2");
 		caps.setCapability("waitForIdleTimeout", 200);

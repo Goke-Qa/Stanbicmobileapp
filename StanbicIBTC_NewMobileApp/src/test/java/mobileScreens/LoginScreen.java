@@ -43,8 +43,8 @@ public class LoginScreen{
 	
 	//Update with valid LoginID and Password
 	public void enterLoginCreds() {
-		driver.findElement(txt_internetbankingID).sendKeys("0033518069");
-		driver.findElement(txt_internetbankingPassword).sendKeys("Etieneosc@r1");
+		driver.findElement(txt_internetbankingID).sendKeys("");
+		driver.findElement(txt_internetbankingPassword).sendKeys("");
 	}
 	
 	public void clickLoginButton() {
@@ -53,9 +53,7 @@ public class LoginScreen{
 	
 	// Update with valid transaction PIN
 	public void click4DigitPIN() {
-		driver.findElement(btn_1).click();
-		driver.findElement(btn_6).click();
-		driver.findElement(btn_6).click();
-		driver.findElement(btn_4).click();
+
+		
 	}
 }
