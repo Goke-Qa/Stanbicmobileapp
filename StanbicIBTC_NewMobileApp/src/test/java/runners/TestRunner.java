@@ -5,7 +5,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions
-(features={"src/test/resources/features/MobileApp_Login.feature"}, 
+(features={"src/test/resources/features"}, 
 glue = {"steps"},
 monochrome = true,
 plugin = {"pretty","html:target/cucumber-reports/report.html"}
