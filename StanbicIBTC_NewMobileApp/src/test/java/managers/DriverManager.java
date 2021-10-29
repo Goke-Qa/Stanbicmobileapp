@@ -30,16 +30,16 @@ public class DriverManager {
 		 */
 		caps.setCapability("platformName", "Android");
 		caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11");
-		caps.setCapability(MobileCapabilityType.UDID, "emulator-5556");
+		caps.setCapability(MobileCapabilityType.UDID, "emulator-5554");
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
 		caps.setCapability("automationName", "UiAutomator2");
 		caps.setCapability("waitForIdleTimeout", 200);
 		caps.setCapability("appPackage", "com.stanbicibtc.mobile");
 		caps.setCapability("appActivity", "com.stanbicibtc.mobile.MainActivity");
-			
-		URL url = null;
+		
+		URL url = null;	
 		try {
-			url = new URL("http://127.0.0.1:4723/wd/hub");
+		url = new URL("http://127.0.0.1:4723/wd/hub");
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		}
@@ -50,7 +50,9 @@ public class DriverManager {
 	}
 
 	public void closeDriver() {
-	//	driver.close();
-	//	driver.quit();
+		if(driver == null) {
+		driver.close();
+		driver.quit();
+		}
 	}
 }

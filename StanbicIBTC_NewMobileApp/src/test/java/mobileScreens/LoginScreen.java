@@ -53,7 +53,6 @@ public class LoginScreen{
 	
 	// Update with valid transaction PIN
 	public void click4DigitPIN() {
-
 		
 	}
 }

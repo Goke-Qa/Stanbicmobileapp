@@ -46,7 +46,7 @@ Feature: Payments
     #Then select account to debit for revpay
     #And continue
 
-  @Functional
+  @active
   Scenario Outline: Cardless Withdrawal
     And click on payment sign
     Then click on cardless withdrawal

@@ -5,14 +5,14 @@ Feature: Transfers
     And user is navigated to the dashboard
     When user navigate to the transfer screen
 
-  @Functional
+  @active
   Scenario Outline: Transfer to Self
     Then user should select transfer to Self
     When user selects source and destination accounts
     And inputs a valid amount and narration
     Then funds should be transfered successfully
 
-  @Functional
+  @active
   Scenario Outline: Transfer to Stanbic IBTC account
     Then user should select transfer to Stanbic IBTC account
     When user selects the source account number
@@ -21,7 +21,7 @@ Feature: Transfers
     Then user should input valid PIN
     And funds should be transfered successfully
 
-  @Functional
+  @active
   Scenario Outline: Transfer to other banks
     Then user should select transfer to other banks
     When user selects the source account number
@@ -31,7 +31,7 @@ Feature: Transfers
     Then user should input valid PIN
     And funds should be transfered successfully
 
-  @Functional
+  @active
   Scenario Outline: Transfer to AtEase account
     Then user should select transfer to AtEase account
     When user selects the source account number
@@ -40,7 +40,7 @@ Feature: Transfers
     Then user should input valid PIN
     And funds should be transfered successfully
 
-  @Functional
+  @active
   Scenario Outline: Transfer to Single Beneficiary
     Then user should select transfer to a Beneficiary
     And selects transfer to a single beneficiary
