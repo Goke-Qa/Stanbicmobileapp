@@ -1,6 +1,5 @@
 package steps;
 import context.TestContext;
-
 import io.cucumber.java.en.*;
 import mobileScreens.Create_AccountScreen;
 import mobileScreens.LoginScreen;
