@@ -267,11 +267,12 @@ public class Payments {
 	public void amount_and_pin() {
 		cardlesswithdrawalScreen.clickCardlessamount();
 		cardlesswithdrawalScreen.clickAccounttodebit();
+		loginScreen.click4DigitPIN();
+		cardlesswithdrawalScreen.clickWithdrawalPIN();
+		loginScreen.click4DigitPIN();
 		cardlesswithdrawalScreen.clickWithdrawalPIN();
 		cardlesswithdrawalScreen.clickEnterPIN();
 		cardlesswithdrawalScreen.verifyDone();
-	   
 	}
-
 
 }

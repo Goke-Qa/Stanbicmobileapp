@@ -1,5 +1,5 @@
 Feature: Login to the Mobile App
-
+@active
   Scenario: Login to mobile App with valid credentials
     Given user selects the MyBank menu
     When user clicks on the login arrow
