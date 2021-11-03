@@ -37,58 +37,8 @@ public class PayBillsScreen{
 		driver.findElement(btn_paybills).click();	
 	}
 	
-	public void clickBillers() {
-		driver.findElement(btn_billers).click();
+	public void confirmDSTV() {
+		driver.findElement(btn_dstv).isDisplayed();
 	}
 	
-	public void verifybillPayments() {
-	}
-	
-	public void clickdstv() {
-		driver.findElement(btn_dstv).click();
-	}
-	
-	public void clickaccounttoDebit() {
-		driver.findElement(btn_accounttodebit).click();
-	}
-	
-	public void verifyDSTVsubScreen() {
-		driver.findElement(btn_arrow).isDisplayed();
-		
-	
-	}
-	
-	public void enterIUC() {
-		driver.findElement(txt_dstvcardnumber).sendKeys("7030188972");
-	}
-	
-	public void clickselectPlan() {
-		driver.findElement(btn_selectplan).click();
-	}
-	
-	public void clickcompact() {
-		driver.findElement(btn_compact).click();
-	}
-	
-	public void clickcontinue() {
-		driver.findElement(btn_continue).click();
-	}
-	
-	public void verifysummary() {
-	}
-	
-	public void clickconfirm() {
-		driver.findElement(btn_confirm).click();
-	}
-	
-	public void clickPIN() {
-		driver.findElement(btn_1).click();
-		driver.findElement(btn_2).click();
-		driver.findElement(btn_3).click();
-		driver.findElement(btn_4).click();
-	}
-	
-	public void clickDone() {
-		driver.findElement(btn_done).click();
-	}
 }

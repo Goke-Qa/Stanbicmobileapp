@@ -1,5 +1,6 @@
 package steps;
 import context.TestContext;
+
 import io.cucumber.java.en.*;
 import mobileScreens.Create_AccountScreen;
 import mobileScreens.LoginScreen;
@@ -42,7 +43,8 @@ public class Login {
 
 	@Then("user is navigated to the dashboard")
 	public void user_is_navigated_to_the_dashboard() {
-		create_AccountScreen.verifydashboard();
-			   
+	//	loginScreen.click4DigitPIN();
+		
+	   
 }
 }
