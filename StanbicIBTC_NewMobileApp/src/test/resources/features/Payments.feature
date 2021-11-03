@@ -3,21 +3,21 @@ Feature: Payments
   Background: User has logged into the app
     Given user has successfully logged into the app
 
-  #@Functional
-  #Scenario Outline: Buy Airtime
-    #And click on payments icon
-    #Then click on buy airtime
-    #And input phone number and amount
-    #Then select account to debit
-    #Then confirm and input pin
+  @Functional
+  Scenario Outline: Buy Airtime
+    And click on payments icon
+    Then click on buy airtime
+    And input phone number and amount
+    Then select account to debit
+    Then confirm and input pin
     
-  #@Functional
-  #Scenario Outline: Auto Airtime
-  #	And click payments icon
-  #	Then click on auto airtime
-  #	And input phone number & amount
-  #	Then select the account to debit
-  #	And input pin
+  @Functional
+  Scenario Outline: Auto Airtime
+  	And click payments icon
+  	Then click on auto airtime
+  	And input threshold
+  	Then select the account to debit
+  	And input pin
   	
   
   #@Functional
@@ -35,34 +35,34 @@ Feature: Payments
     Then select an account to debit
     
     
-    #@Functional
-    #Scenario Outline: Pay Bills
-    #And click on payments icon
-    #Then click on pay bills
-    #And select platform you are paying for
-    #Then select account to debit during bills payment
-    #Then input unique numbers of the platform
-    #Then select plan
-    #Then confirm
+    @Functional
+    Scenario Outline: Pay Bills
+    And click on payments icon
+    Then click on pay bills
+    And confirm user can see all third party vendor
     
     
-    #@Functional
-    #Scenario Outline: Corporate Billers
-    #And click on the payments icon
-    #Then click on Corporate Billers
-    #And select Government
-    #When you click on revpay
-    #Then select account to debit for revpay
-    #And continue
+    @Functional
+    Scenario Outline: Corporate Billers
+    And click on the payments icon
+    Then click on Corporate Billers
+    And confirm government category
+    And confirm airlines category
+    And confirm insurance category
+    And confirm construction category
+    And confirm others category
+    And confirm cableTV category
+    And confirm investment category
+    And confirm shipping category 
     
     
-    #@Functional
-    #Scenario Outline: Cardless Withdrawal
-    #	And click on payment sign
-    #	Then click on cardless withdrawal
-    #	And amount and pin
+    @Functional
+    Scenario Outline: Cardless Withdrawal
+    	And click on payment sign
+    	Then click on cardless withdrawal
+    	And amount and pin
     	
     
     
     
-    
+

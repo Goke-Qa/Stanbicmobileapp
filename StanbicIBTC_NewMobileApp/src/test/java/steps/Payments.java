@@ -67,15 +67,12 @@ public class Payments {
 
 	@Then("select account to debit")
 	public void select_account_to_debit() {
-		buyairtimescreen.verifyaccounttodebitpage();
 		buyairtimescreen.clickaccounttodebit();
-		buyairtimescreen.verifysummarypage();
 		buyairtimescreen.clickconfirm();
 	}
 
 	@Then("confirm and input pin")
 	public void confirm_and_input_pin() {
-		buyairtimescreen.verifypinpage();
 		loginScreen.click4DigitPIN();
 	}
 
@@ -99,19 +96,19 @@ public class Payments {
 
 	}
 
-	@And("input phone number & amount")
-	public void input_phone_number_amount() {
-		buyairtimescreen.clickmtn();
-		buyairtimescreen.enterPhonenumber();
+	@Then("input threshold")
+	public void input_threshold() {
+		autoairtimeScreen.verifyAutoairtimeScreen();
+		autoairtimeScreen.inputPhonenumber();
 		autoairtimeScreen.inputThreshould();
-		buyairtimescreen.enterAmount();
-		buyairtimescreen.clicknext();
-		buyairtimescreen.clickaccounttodebit();
+		autoairtimeScreen.inputAmount();
+		autoairtimeScreen.clickTaptosave();
+		
 	}
 
 	@Then("select the account to debit")
 	public void select_the_account_to_debit() {
-		buyairtimescreen.verifysummarypage();
+		autoairtimeScreen.selectAccount();
 		buyairtimescreen.clickconfirm();
 	}
 
@@ -136,7 +133,6 @@ public class Payments {
 		buyforselfScreen.inputAmount();
 		buyforselfScreen.clickNext();
 		buyairtimescreen.clickaccounttodebit();
-		buyairtimescreen.verifysummarypage();
 		buyairtimescreen.clickconfirm();
 
 	}
@@ -186,43 +182,13 @@ public class Payments {
 	@Then("click on pay bills")
 	public void click_on_pay_bills() throws Exception {
 		paybillsscreen.clickpayBills();
-		Thread.sleep(5000);
-		paybillsscreen.clickBillers();
-		paybillsscreen.verifybillPayments();
+		
 
 	}
 
-	@And("select platform you are paying for")
-	public void select_platform_you_are_paying_for() {
-		paybillsscreen.clickdstv();
-	}
-
-	@Then("select account to debit during bills payment")
-	public void select_account_to_debit_during_bills_payment() {
-		paybillsscreen.clickaccounttoDebit();
-	}
-
-	@Then("input unique numbers of the platform")
-	public void input_unique_numbers_of_the_platform() throws Exception {
-		Thread.sleep(20000);
-		paybillsscreen.verifyDSTVsubScreen();
-		paybillsscreen.enterIUC();
-
-	}
-
-	@Then("select plan")
-	public void select_plan() {
-		paybillsscreen.clickselectPlan();
-		paybillsscreen.clickcompact();
-		paybillsscreen.clickcontinue();
-	}
-
-	@Then("confirm")
-	public void confirm() {
-		paybillsscreen.verifysummary();
-		paybillsscreen.clickconfirm();
-		loginScreen.click4DigitPIN();
-		paybillsscreen.clickDone();
+	@And("confirm user can see all third party vendor")
+	public void confirm_user_can_see_all_third_party_vendor() {
+	   paybillsscreen.confirmDSTV();
 	}
 
 	/*
@@ -239,31 +205,47 @@ public class Payments {
 	public void click_on_corporate_billers() {
 		corporatebillersscreen.clickcorporateBillers();
 	}
-
-	@Then("select Government")
-	public void select_government() {
+	
+	@Then("confirm government category")
+	public void confirm_government_category() {
 		corporatebillersscreen.clickgovernment();
 	}
 
-	@When("you click on revpay")
-	public void you_click_on_revpay() {
-		corporatebillersscreen.clickrevpay();
+	@Then("confirm airlines category")
+	public void confirm_airlines_category() {
+		corporatebillersscreen.clickAirlines();
 	}
 
-	@Then("select account to debit for revpay")
-	public void select_account_to_debit_for_revpay() {
-
+	@Then("confirm insurance category")
+	public void confirm_insurance_category() {
+	    corporatebillersscreen.clickInsurance();
 	}
 
-	@Then("continue")
-	public void continue1() {
-		corporatebillersscreen.clickaccounttoDebit();
-		corporatebillersscreen.clickwebGUID();
-		corporatebillersscreen.clickyes();
-		corporatebillersscreen.clickcontinue();
-		corporatebillersscreen.enterCreds();
-		corporatebillersscreen.clickcontinue1();
+	@Then("confirm construction category")
+	public void confirm_construction_category() {
+		corporatebillersscreen.clickConstruction();
 	}
+
+	@Then("confirm others category")
+	public void confirm_others_category() {
+		corporatebillersscreen.clickOthers();
+	}
+
+	@Then("confirm cableTV category")
+	public void confirm_cable_tv_category() {
+		corporatebillersscreen.clickCableTV();
+	}
+
+	@Then("confirm investment category")
+	public void confirm_investment_category() {
+		corporatebillersscreen.clickInvestments();
+	}
+
+	@Then("confirm shipping category")
+	public void confirm_shipping_category() {
+		 corporatebillersscreen.clickShipping();
+	}
+	    
 	
 	/*
 	The steps below are solely for "Cardless Withdrawal"
@@ -287,6 +269,7 @@ public class Payments {
 		cardlesswithdrawalScreen.clickAccounttodebit();
 		cardlesswithdrawalScreen.clickWithdrawalPIN();
 		cardlesswithdrawalScreen.clickEnterPIN();
+		cardlesswithdrawalScreen.verifyDone();
 	   
 	}
 
