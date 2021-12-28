@@ -1,5 +1,5 @@
 Feature: MobileApp Logout
-@Functional
+@active
 Scenario: Logout of the stanbic ibtc mobile app
 Given user has logged onto the app
 And user is on dashboard

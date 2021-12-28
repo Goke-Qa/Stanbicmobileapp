@@ -34,6 +34,7 @@ public class DriverManager {
 		caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
 		caps.setCapability("automationName", "UiAutomator2");
 		caps.setCapability("waitForIdleTimeout", 200);
+		//caps.setCapability("automationName", "UiAutomator2");
 		caps.setCapability("appPackage", "com.stanbicibtc.mobile");
 		caps.setCapability("appActivity", "com.stanbicibtc.mobile.MainActivity");
 		
@@ -51,8 +52,8 @@ public class DriverManager {
 
 	public void closeDriver() {
 		if(driver == null) {
-		driver.close();
-		driver.quit();
+	//	driver.close();
+		//driver.quit();
 		}
 	}
 }

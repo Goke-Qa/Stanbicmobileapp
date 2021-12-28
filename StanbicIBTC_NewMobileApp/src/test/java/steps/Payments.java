@@ -97,7 +97,7 @@ public class Payments {
 	}
 
 	@Then("input threshold")
-	public void input_threshold() {
+	public void input_threshold() throws Exception {
 		autoairtimeScreen.verifyAutoairtimeScreen();
 		autoairtimeScreen.inputPhonenumber();
 		autoairtimeScreen.inputThreshould();
@@ -267,10 +267,11 @@ public class Payments {
 	public void amount_and_pin() {
 		cardlesswithdrawalScreen.clickCardlessamount();
 		cardlesswithdrawalScreen.clickAccounttodebit();
-		loginScreen.click4DigitPIN();
 		cardlesswithdrawalScreen.clickWithdrawalPIN();
-		loginScreen.click4DigitPIN();
-		cardlesswithdrawalScreen.clickWithdrawalPIN();
+	}
+	
+	@Then("confirm done button")
+		public void confirm_done_button() {
 		cardlesswithdrawalScreen.clickEnterPIN();
 		cardlesswithdrawalScreen.verifyDone();
 	}

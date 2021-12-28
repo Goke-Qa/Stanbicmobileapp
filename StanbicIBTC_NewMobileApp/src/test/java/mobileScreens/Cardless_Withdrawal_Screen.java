@@ -66,10 +66,17 @@ public class Cardless_Withdrawal_Screen {
 		driver.findElement(btn_continuepaycode).click();
 	}
 	public void clickWithdrawalPIN() {
-		
+		driver.findElement(btn_withdrawalpin3).click();
+		driver.findElement(btn_withdrawalpin7).click();
+		driver.findElement(btn_withdrawalpin7).click();
+		driver.findElement(btn_withdrawalpin6).click();
+		driver.findElement(btn_withdrawalcontinue).click();
 	}
 	public void clickEnterPIN() {
-		
+		driver.findElement(btn_enterpin6).click();
+		driver.findElement(btn_enterpin6).click();
+		driver.findElement(btn_enterpin5).click();
+		driver.findElement(btn_enterpin8).click();
 		driver.findElement(btn_generate).click();
 	}
 	public void verifyDone() {

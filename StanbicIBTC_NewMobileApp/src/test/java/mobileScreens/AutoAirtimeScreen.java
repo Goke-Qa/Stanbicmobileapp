@@ -52,7 +52,7 @@ public class AutoAirtimeScreen {
 	public void inputAmount() {
 		driver.findElement(txt_enteranamount).sendKeys("5");
 	}
-	public void clickTaptosave() {
+	public void clickTaptosave() throws Exception {
 		java.util.List<MobileElement> lists = driver.findElements(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[15]/android.widget.TextView"));
 		for(MobileElement e : lists)
 			System.out.println(e.getAttribute("text"));
@@ -75,6 +75,7 @@ public class AutoAirtimeScreen {
 
 		.moveTo(PointOption.point(end_x, end_y)).release().perform();
 		driver.findElement(btn_taptosave).click();
+		Thread.sleep(3000);
 		driver.findElement(btn_next).click();
 	}
 	public void selectAccount() {

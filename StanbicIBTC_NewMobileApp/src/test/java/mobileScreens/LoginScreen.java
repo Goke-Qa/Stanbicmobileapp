@@ -42,8 +42,8 @@ public class LoginScreen{
 	}
 	
 	public void enterLoginCreds() {
-		driver.findElement(txt_internetbankingID).sendKeys("");
-		driver.findElement(txt_internetbankingPassword).sendKeys("");
+		driver.findElement(txt_internetbankingID).sendKeys("0037142260");
+		driver.findElement(txt_internetbankingPassword).sendKeys("Olagoke89#");
 	}
 	
 	public void clickLoginButton() {
@@ -51,5 +51,9 @@ public class LoginScreen{
 	}
 	
 	public void click4DigitPIN() {
+		driver.findElement(btn_6).click();
+		driver.findElement(btn_6).click();
+		driver.findElement(btn_5).click();
+		driver.findElement(btn_8).click();
 	}
 }

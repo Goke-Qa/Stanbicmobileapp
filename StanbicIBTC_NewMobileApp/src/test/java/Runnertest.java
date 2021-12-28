@@ -4,11 +4,11 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions
-(features="src/test/resources/Features", 
-glue = {"src/test/java/steps"},
+(features="src/test/resources/features", 
+glue = {"steps"},
 monochrome = true,
-plugin = {"pretty","html:target/cucumber-reports/report.html"},
-tags =  "@functional"
+plugin = {"pretty","html:target/cucumber-reports/report.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
+tags =  "@active"
 		)
 
 public class Runnertest {
